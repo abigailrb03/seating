@@ -51,14 +51,17 @@ def construct_smtp_server(smtp: SMTPConfig):
     return smtp_server
 
 
-def send_email_batch(*, smtp_server: SMTP, batch=list[EmailMessage],
+def send_email_batch(*, smtp_server: SMTP, batch=list[EmailMessage], envelope_sender_addr: str,
                      max_retries=3, retry_delay=1.0, exponential_backoff=True):
     successful_emails = []
     failed_emails = []
     for msg in batch:
         for attempt in range(max_retries):
             try:
-                smtp_server.send_message(msg)
+                smtp_server.sendmail(
+                    from_addr=envelope_sender_addr, # The authorized sender email
+                    to_addrs=[msg['To']] + (msg.get_all('Bcc', []) or []) + (msg.get_all('Cc', []) or []),
+                    msg=msg.as_string())
                 successful_emails.append((msg, None))
                 break
             except Exception as e:
@@ -89,6 +92,7 @@ def send_emails(*, smtp: SMTPConfig, messages=list[EmailMessage],
             batch = messages[i:i + batch_size]
             successful_batch, failed_batch = send_email_batch(
                 smtp_server=smtp_server, batch=batch,
+                envelope_sender_addr=smtp.username, 
                 max_retries=max_retries, retry_delay=retry_delay, exponential_backoff=exponential_backoff)
             successful_emails.extend(successful_batch)
             failed_emails.extend(failed_batch)
