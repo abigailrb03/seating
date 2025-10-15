@@ -115,3 +115,5 @@ setup*.sh
 
 # cache
 .cache/
+
+**/.DS_Store

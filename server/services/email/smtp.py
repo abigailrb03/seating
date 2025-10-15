@@ -5,11 +5,12 @@ from time import sleep
 
 
 class SMTPConfig:
-    def __init__(self, smtp_server, smtp_port, username, password, use_tls=True, use_auth=True):
+    def __init__(self, smtp_server, smtp_port, username, password, email, use_tls=True, use_auth=True):
         self.smtp_server = smtp_server
         self.smtp_port = smtp_port
         self.username = username
         self.password = password
+        self.sender_email = email
         self.use_tls = use_tls
         self.use_auth = use_auth
 
@@ -92,7 +93,7 @@ def send_emails(*, smtp: SMTPConfig, messages=list[EmailMessage],
             batch = messages[i:i + batch_size]
             successful_batch, failed_batch = send_email_batch(
                 smtp_server=smtp_server, batch=batch,
-                envelope_sender_addr=smtp.username, 
+                envelope_sender_addr=smtp.sender_email, 
                 max_retries=max_retries, retry_delay=retry_delay, exponential_backoff=exponential_backoff)
             successful_emails.extend(successful_batch)
             failed_emails.extend(failed_batch)

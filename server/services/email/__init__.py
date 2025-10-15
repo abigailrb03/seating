@@ -9,7 +9,8 @@ _email_config = SMTPConfig(
     app.config.get('EMAIL_SERVER'),
     app.config.get('EMAIL_PORT'),
     app.config.get('EMAIL_USERNAME'),
-    app.config.get('EMAIL_PASSWORD')
+    app.config.get('EMAIL_PASSWORD'),
+    app.config.get('EMAIL_SENDER')
 )
 
 

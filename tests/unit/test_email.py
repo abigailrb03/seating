@@ -115,7 +115,7 @@ from aiosmtpd.controller import Controller  # noqa
 from aiosmtpd.handlers import Message as MessageHandler  # noqa
 from email import message_from_string  # noqa
 
-_fake_email_config = SMTPConfig('127.0.0.1', 1025, 'user', 'pass', use_tls=False, use_auth=False)
+_fake_email_config = SMTPConfig('127.0.0.1', 1025, 'user', 'pass', '', use_tls=False, use_auth=False)
 
 
 class CustomMessageHandler(MessageHandler):
