@@ -67,7 +67,7 @@ def send_email_batch(*, smtp_server: SMTP, batch=list[EmailMessage], envelope_se
                 break
             except Exception as e:
                 current_app.logger.error(
-                    f"Error on attempt {attempt + 1} for email to {msg['To']}: {str(e)}")
+                    f"Error on attempt {attempt + 1} for email to {msg['To']}: {str(e)}", exc_info=True)
                 if attempt < max_retries - 1:
                     cur_delay = retry_delay * (2 ** attempt) if exponential_backoff else retry_delay
                     sleep(cur_delay)

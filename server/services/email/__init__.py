@@ -1,3 +1,4 @@
+import os
 from server import app
 from server.models import db
 from server.services.email.smtp import SMTPConfig, construct_email, send_emails
@@ -10,7 +11,7 @@ _email_config = SMTPConfig(
     app.config.get('EMAIL_PORT'),
     app.config.get('EMAIL_USERNAME'),
     app.config.get('EMAIL_PASSWORD'),
-    app.config.get('EMAIL_SENDER')
+    os.environ.get('EMAIL_SENDER')
 )
 
 
