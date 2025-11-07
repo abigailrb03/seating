@@ -52,43 +52,6 @@ def filter_seats_by_preference(seats, preference: Preference):
 def get_preference_from_student(student):
     return Preference(student.wants, student.avoids, student.room_wants, student.room_avoids)
 
-
-def assign_students_unoptimized(exam):
-    """
-    The strategy:
-    Look for students whose requirements are the most restrictive
-        (i.e. have the fewest possible seats).
-    Randomly assign them a seat.
-    Repeat.
-    """
-    students = set(exam.unassigned_students)
-    seats = set(exam.unassigned_seats)
-
-    assignments = []
-    while students:
-        students_by_preference: dict[Preference, list[Student]] = \
-            arr_to_dict(students, key_getter=get_preference_from_student)
-        seats_by_preference: dict[Preference, list[Seat]] = {
-            preference: filter_seats_by_preference(seats, preference)
-            for preference in students_by_preference.keys()
-        }
-        min_preference: Preference = min(seats_by_preference,
-                                         key=lambda k: len(seats_by_preference[k]))
-        min_students: list[Student] = students_by_preference[min_preference]
-        min_seats: list[Seat] = seats_by_preference[min_preference]
-
-        if not min_seats:
-            raise NotEnoughSeatError(exam, min_students, min_preference)
-
-        student = random.choice(min_students)
-        seat = random.choice(min_seats)
-
-        students.remove(student)
-        seats.remove(seat)
-
-        assignments.append(SeatAssignment(student=student, seat=seat))
-    return assignments
-
 def assign_students(exam):
     """
     Optimized Strategy:
