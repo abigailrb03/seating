@@ -108,9 +108,12 @@ def assign_students(exam):
             raise NotEnoughSeatError(exam, original_students_for_pref, min_preference)
 
         # b. Pick a random student and seat
-        student = random.choice(min_students)
-        # random.choice on a set is tricky. Convert to list.
-        seat = random.choice(list(min_seats))
+        # Always convert to list in a consistent way to ensure predictable mock calls
+        min_students_list = list(min_students)
+        min_seats_list = list(min_seats)
+        
+        student = random.choice(min_students_list)
+        seat = random.choice(min_seats_list)
 
         assignments.append(SeatAssignment(student=student, seat=seat))
 
