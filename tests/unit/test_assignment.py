@@ -1,7 +1,6 @@
 import unittest
 from unittest.mock import MagicMock, patch, call
 
-# Import the functions and classes to be tested
 from server.services.core.assign import (
     Preference,
     is_seat_valid_for_preference,
@@ -11,13 +10,9 @@ from server.services.core.assign import (
     assign_single_student
 )
 
-# We also need to import the custom exceptions to test for them
-# We mock the models, but we need the real exception classes
 from server.typings.exception import NotEnoughSeatError, SeatOverrideError
 
-# --- Mock Models ---
-# We create MagicMock objects to stand in for your server.models.
-# This isolates our logic from the database.
+# Mock Models
 MockStudent = MagicMock
 MockSeat = MagicMock
 MockRoom = MagicMock
@@ -124,8 +119,6 @@ class TestSeatPreferenceLogic(unittest.TestCase):
         expected_pref = Preference(wants={'a'}, avoids={'b'}, room_wants={'1'}, room_avoids={'2'})
         self.assertEqual(pref, expected_pref)
 
-
-# We patch dependencies *where they are looked up*: 'server.services.core.assign'
 @patch('server.services.core.assign.SeatAssignment', MockSeatAssignment)
 @patch('server.services.core.assign.arr_to_dict')
 @patch('server.services.core.assign.random.choice')
@@ -138,13 +131,12 @@ class TestAssignStudents(unittest.TestCase):
         self.room2 = MockRoom(id=2, name='R2')
         self.room2.__repr__ = lambda s: f"<MockRoom id={s.id}>"
 
-        # --- Preferences ---
+        # Preferences
         self.pref_a = Preference(wants={'A'}, avoids=set(), room_wants=set(), room_avoids=set())
         self.pref_b = Preference(wants={'B'}, avoids=set(), room_wants=set(), room_avoids=set())
         self.pref_c_room1 = Preference(wants={'C'}, avoids=set(), room_wants={'1'}, room_avoids=set())
 
-        # --- Students ---
-        # ** FIX: Add __repr__ to make mocks printable, fixing TypeError on exception
+        # Students
         self.s_a1 = MockStudent(name='s_a1', wants={'A'}, avoids=set(), room_wants=set(), room_avoids=set())
         self.s_a1.__repr__ = lambda s: f"<MockStudent name={s.name}>"
         self.s_b1 = MockStudent(name='s_b1', wants={'B'}, avoids=set(), room_wants=set(), room_avoids=set())
@@ -152,7 +144,7 @@ class TestAssignStudents(unittest.TestCase):
         self.s_b2 = MockStudent(name='s_b2', wants={'B'}, avoids=set(), room_wants=set(), room_avoids=set())
         self.s_b2.__repr__ = lambda s: f"<MockStudent name={s.name}>"
 
-        # --- Seats ---
+        # Seats
         self.seat_a1 = MockSeat(name='seat_a1', attributes={'A'}, room=self.room1)
         self.seat_a1.__repr__ = lambda s: f"<MockSeat name={s.name}>"
         self.seat_a2 = MockSeat(name='seat_a2', attributes={'A'}, room=self.room2)
@@ -295,7 +287,7 @@ class TestAssignSingleStudent(unittest.TestCase):
         self.student_c = MockStudent(
             name='s_c1', wants={'C'}, avoids=set(), room_wants={'1'}, room_avoids=set()
         )
-        # ** FIX: Add __repr__ to make mock printable
+        # make mock printable
         self.student_c.__repr__ = lambda s: f"<MockStudent name={s.name}>"
         
         # A valid seat for student_c
