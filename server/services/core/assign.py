@@ -53,7 +53,7 @@ def get_preference_from_student(student):
     return Preference(student.wants, student.avoids, student.room_wants, student.room_avoids)
 
 
-def assign_students(exam):
+def assign_students_unoptimized(exam):
     """
     The strategy:
     Look for students whose requirements are the most restrictive
@@ -87,6 +87,77 @@ def assign_students(exam):
         seats.remove(seat)
 
         assignments.append(SeatAssignment(student=student, seat=seat))
+    return assignments
+
+def assign_students(exam):
+    """
+    Optimized Strategy:
+    1. (One-Time) Group all students by preference into lists.
+    2. (One-Time) Group all seats by preference into sets for fast removal.
+    3. Loop N times (once per student):
+     a. Find the "most restrictive" preference by checking group lengths.
+     b. Pick a random student and seat from those groups.
+     c. Remove the student from their list.
+     d. Remove the seat from *all* seat sets it belongs to so it can't be assigned again.
+    """
+    students = set(exam.unassigned_students)
+    all_seats = set(exam.unassigned_seats)
+    assignments = []
+
+    if not students:
+        return []
+
+    # Step 1. Pre-calculate Student Groups
+    students_by_pref: dict[Preference, list[Student]] = \
+        arr_to_dict(students, key_getter=get_preference_from_student)
+
+    all_preferences = students_by_pref.keys()
+
+    # Step 2. Pre-calculate Seat Groups 
+    seats_by_pref: dict[Preference, set[Seat]] = {
+        preference: set(filter_seats_by_preference(all_seats, preference))
+        for preference in all_preferences
+    }
+
+    # Step 3. Run the Loop N times
+    for i in range(len(students)):
+        # Find preferences that still have students
+        active_preferences = [p for p, s_list in students_by_pref.items() if s_list]
+
+        if not active_preferences:
+            # Should not happen, but good to check
+            break
+
+        # a. Find the most restrictive preference (least seats avaialable)
+        min_preference: Preference = min(
+            active_preferences,
+            key=lambda k: len(seats_by_pref[k])
+        )
+
+        min_students: list[Student] = students_by_pref[min_preference]
+        min_seats: set[Seat] = seats_by_pref[min_preference]
+
+        if not min_seats:
+            # Need to get the *original* full list of students for the error
+            original_students_for_pref = arr_to_dict(
+                exam.unassigned_students, get_preference_from_student
+            )[min_preference]
+            raise NotEnoughSeatError(exam, original_students_for_pref, min_preference)
+
+        # b. Pick a random student and seat
+        student = random.choice(min_students)
+        # random.choice on a set is tricky. Convert to list.
+        seat = random.choice(list(min_seats))
+
+        assignments.append(SeatAssignment(student=student, seat=seat))
+
+        # c. Remove the student
+        min_students.remove(student)
+
+        # d. Remove the seat from *all* preference sets
+        for pref_set in seats_by_pref.values():
+            pref_set.discard(seat)
+
     return assignments
 
 
