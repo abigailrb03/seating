@@ -52,41 +52,78 @@ def filter_seats_by_preference(seats, preference: Preference):
 def get_preference_from_student(student):
     return Preference(student.wants, student.avoids, student.room_wants, student.room_avoids)
 
-
 def assign_students(exam):
     """
-    The strategy:
-    Look for students whose requirements are the most restrictive
-        (i.e. have the fewest possible seats).
-    Randomly assign them a seat.
-    Repeat.
+    Optimized Strategy:
+    1. (One-Time) Group all students by preference into lists.
+    2. (One-Time) Group all seats by preference into sets for fast removal.
+    3. Loop N times (once per student):
+     a. Find the "most restrictive" preference by checking group lengths.
+     b. Pick a random student and seat from those groups.
+     c. Remove the student from their list.
+     d. Remove the seat from *all* seat sets it belongs to so it can't be assigned again.
     """
     students = set(exam.unassigned_students)
-    seats = set(exam.unassigned_seats)
-
+    all_seats = set(exam.unassigned_seats)
     assignments = []
-    while students:
-        students_by_preference: dict[Preference, list[Student]] = \
-            arr_to_dict(students, key_getter=get_preference_from_student)
-        seats_by_preference: dict[Preference, list[Seat]] = {
-            preference: filter_seats_by_preference(seats, preference)
-            for preference in students_by_preference.keys()
-        }
-        min_preference: Preference = min(seats_by_preference,
-                                         key=lambda k: len(seats_by_preference[k]))
-        min_students: list[Student] = students_by_preference[min_preference]
-        min_seats: list[Seat] = seats_by_preference[min_preference]
+
+    if not students:
+        return []
+
+    # Step 1. Pre-calculate Student Groups
+    students_by_pref: dict[Preference, list[Student]] = \
+        arr_to_dict(students, key_getter=get_preference_from_student)
+
+    all_preferences = students_by_pref.keys()
+
+    # Step 2. Pre-calculate Seat Groups 
+    seats_by_pref: dict[Preference, set[Seat]] = {
+        preference: set(filter_seats_by_preference(all_seats, preference))
+        for preference in all_preferences
+    }
+
+    # Step 3. Run the Loop N times
+    for i in range(len(students)):
+        # Find preferences that still have students
+        active_preferences = [p for p, s_list in students_by_pref.items() if s_list]
+
+        if not active_preferences:
+            # Should not happen, but good to check
+            break
+
+        # a. Find the most restrictive preference (least seats avaialable)
+        min_preference: Preference = min(
+            active_preferences,
+            key=lambda k: len(seats_by_pref[k])
+        )
+
+        min_students: list[Student] = students_by_pref[min_preference]
+        min_seats: set[Seat] = seats_by_pref[min_preference]
 
         if not min_seats:
-            raise NotEnoughSeatError(exam, min_students, min_preference)
+            # Need to get the *original* full list of students for the error
+            original_students_for_pref = arr_to_dict(
+                exam.unassigned_students, get_preference_from_student
+            )[min_preference]
+            raise NotEnoughSeatError(exam, original_students_for_pref, min_preference)
 
-        student = random.choice(min_students)
-        seat = random.choice(min_seats)
-
-        students.remove(student)
-        seats.remove(seat)
+        # b. Pick a random student and seat
+        # Always convert to list in a consistent way to ensure predictable mock calls
+        min_students_list = list(min_students)
+        min_seats_list = list(min_seats)
+        
+        student = random.choice(min_students_list)
+        seat = random.choice(min_seats_list)
 
         assignments.append(SeatAssignment(student=student, seat=seat))
+
+        # c. Remove the student
+        min_students.remove(student)
+
+        # d. Remove the seat from *all* preference sets
+        for pref_set in seats_by_pref.values():
+            pref_set.discard(seat)
+
     return assignments
 
 
