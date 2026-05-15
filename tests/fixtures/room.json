@@ -9,6 +9,22 @@
         "display_name": "Soda 999",
         "start_at": "2023-12-12T10:00:00Z!",
         "duration_minutes": 120
+      },
+      {
+        "id": 2,
+        "exam_id": 1,
+        "name": "wheeler150",
+        "display_name": "Wheeler 150",
+        "start_at": "2023-12-12T13:00:00Z",
+        "duration_minutes": 120
+      },
+      {
+        "id": 3,
+        "exam_id": 1,
+        "name": "dwinelle155",
+        "display_name": "Dwinelle 155",
+        "start_at": "2023-12-12T16:00:00Z",
+        "duration_minutes": 90
       }
     ]
   }

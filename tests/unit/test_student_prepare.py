@@ -13,7 +13,7 @@ import pytest
 def exam169(seeded_db):
     exam = Exam.query.get(1)
     assert exam is not None
-    assert len(exam.students) == 3
+    assert len(exam.students) == 300
     yield exam
 
 

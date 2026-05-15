@@ -21,7 +21,9 @@
         "email": "sharon@berkeley.edu",
         "name": "Sharon Lovera",
         "sid": "3033033335",
-        "wants": ["Lefty"],
+        "wants": [
+          "Lefty"
+        ],
         "avoids": [],
         "room_wants": [],
         "room_avoids": []
@@ -33,8 +35,4085 @@
         "email": "angelaz8@berkeley.edu",
         "name": "Lavender Angela",
         "sid": "3033033336",
-        "wants": ["Righty"],
-        "avoids": ["Lefty", "Broken"],
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [
+          "Lefty",
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 4,
+        "exam_id": 1,
+        "canvas_id": "500004",
+        "email": "student4@berkeley.edu",
+        "name": "Test Student 4",
+        "sid": "3033030004",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 5,
+        "exam_id": 1,
+        "canvas_id": "500005",
+        "email": "student5@berkeley.edu",
+        "name": "Test Student 5",
+        "sid": "3033030005",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 6,
+        "exam_id": 1,
+        "canvas_id": "500006",
+        "email": "student6@berkeley.edu",
+        "name": "Test Student 6",
+        "sid": "3033030006",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 7,
+        "exam_id": 1,
+        "canvas_id": "500007",
+        "email": "student7@berkeley.edu",
+        "name": "Test Student 7",
+        "sid": "3033030007",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 8,
+        "exam_id": 1,
+        "canvas_id": "500008",
+        "email": "student8@berkeley.edu",
+        "name": "Test Student 8",
+        "sid": "3033030008",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 9,
+        "exam_id": 1,
+        "canvas_id": "500009",
+        "email": "student9@berkeley.edu",
+        "name": "Test Student 9",
+        "sid": "3033030009",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 10,
+        "exam_id": 1,
+        "canvas_id": "500010",
+        "email": "student10@berkeley.edu",
+        "name": "Test Student 10",
+        "sid": "3033030010",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 11,
+        "exam_id": 1,
+        "canvas_id": "500011",
+        "email": "student11@berkeley.edu",
+        "name": "Test Student 11",
+        "sid": "3033030011",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 12,
+        "exam_id": 1,
+        "canvas_id": "500012",
+        "email": "student12@berkeley.edu",
+        "name": "Test Student 12",
+        "sid": "3033030012",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 13,
+        "exam_id": 1,
+        "canvas_id": "500013",
+        "email": "student13@berkeley.edu",
+        "name": "Test Student 13",
+        "sid": "3033030013",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 14,
+        "exam_id": 1,
+        "canvas_id": "500014",
+        "email": "student14@berkeley.edu",
+        "name": "Test Student 14",
+        "sid": "3033030014",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 15,
+        "exam_id": 1,
+        "canvas_id": "500015",
+        "email": "student15@berkeley.edu",
+        "name": "Test Student 15",
+        "sid": "3033030015",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 16,
+        "exam_id": 1,
+        "canvas_id": "500016",
+        "email": "student16@berkeley.edu",
+        "name": "Test Student 16",
+        "sid": "3033030016",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 17,
+        "exam_id": 1,
+        "canvas_id": "500017",
+        "email": "student17@berkeley.edu",
+        "name": "Test Student 17",
+        "sid": "3033030017",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 18,
+        "exam_id": 1,
+        "canvas_id": "500018",
+        "email": "student18@berkeley.edu",
+        "name": "Test Student 18",
+        "sid": "3033030018",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 19,
+        "exam_id": 1,
+        "canvas_id": "500019",
+        "email": "student19@berkeley.edu",
+        "name": "Test Student 19",
+        "sid": "3033030019",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 20,
+        "exam_id": 1,
+        "canvas_id": "500020",
+        "email": "student20@berkeley.edu",
+        "name": "Test Student 20",
+        "sid": "3033030020",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 21,
+        "exam_id": 1,
+        "canvas_id": "500021",
+        "email": "student21@berkeley.edu",
+        "name": "Test Student 21",
+        "sid": "3033030021",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 22,
+        "exam_id": 1,
+        "canvas_id": "500022",
+        "email": "student22@berkeley.edu",
+        "name": "Test Student 22",
+        "sid": "3033030022",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 23,
+        "exam_id": 1,
+        "canvas_id": "500023",
+        "email": "student23@berkeley.edu",
+        "name": "Test Student 23",
+        "sid": "3033030023",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 24,
+        "exam_id": 1,
+        "canvas_id": "500024",
+        "email": "student24@berkeley.edu",
+        "name": "Test Student 24",
+        "sid": "3033030024",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 25,
+        "exam_id": 1,
+        "canvas_id": "500025",
+        "email": "student25@berkeley.edu",
+        "name": "Test Student 25",
+        "sid": "3033030025",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 26,
+        "exam_id": 1,
+        "canvas_id": "500026",
+        "email": "student26@berkeley.edu",
+        "name": "Test Student 26",
+        "sid": "3033030026",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 27,
+        "exam_id": 1,
+        "canvas_id": "500027",
+        "email": "student27@berkeley.edu",
+        "name": "Test Student 27",
+        "sid": "3033030027",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 28,
+        "exam_id": 1,
+        "canvas_id": "500028",
+        "email": "student28@berkeley.edu",
+        "name": "Test Student 28",
+        "sid": "3033030028",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 29,
+        "exam_id": 1,
+        "canvas_id": "500029",
+        "email": "student29@berkeley.edu",
+        "name": "Test Student 29",
+        "sid": "3033030029",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 30,
+        "exam_id": 1,
+        "canvas_id": "500030",
+        "email": "student30@berkeley.edu",
+        "name": "Test Student 30",
+        "sid": "3033030030",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 31,
+        "exam_id": 1,
+        "canvas_id": "500031",
+        "email": "student31@berkeley.edu",
+        "name": "Test Student 31",
+        "sid": "3033030031",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 32,
+        "exam_id": 1,
+        "canvas_id": "500032",
+        "email": "student32@berkeley.edu",
+        "name": "Test Student 32",
+        "sid": "3033030032",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 33,
+        "exam_id": 1,
+        "canvas_id": "500033",
+        "email": "student33@berkeley.edu",
+        "name": "Test Student 33",
+        "sid": "3033030033",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 34,
+        "exam_id": 1,
+        "canvas_id": "500034",
+        "email": "student34@berkeley.edu",
+        "name": "Test Student 34",
+        "sid": "3033030034",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 35,
+        "exam_id": 1,
+        "canvas_id": "500035",
+        "email": "student35@berkeley.edu",
+        "name": "Test Student 35",
+        "sid": "3033030035",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 36,
+        "exam_id": 1,
+        "canvas_id": "500036",
+        "email": "student36@berkeley.edu",
+        "name": "Test Student 36",
+        "sid": "3033030036",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 37,
+        "exam_id": 1,
+        "canvas_id": "500037",
+        "email": "student37@berkeley.edu",
+        "name": "Test Student 37",
+        "sid": "3033030037",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 38,
+        "exam_id": 1,
+        "canvas_id": "500038",
+        "email": "student38@berkeley.edu",
+        "name": "Test Student 38",
+        "sid": "3033030038",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 39,
+        "exam_id": 1,
+        "canvas_id": "500039",
+        "email": "student39@berkeley.edu",
+        "name": "Test Student 39",
+        "sid": "3033030039",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 40,
+        "exam_id": 1,
+        "canvas_id": "500040",
+        "email": "student40@berkeley.edu",
+        "name": "Test Student 40",
+        "sid": "3033030040",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 41,
+        "exam_id": 1,
+        "canvas_id": "500041",
+        "email": "student41@berkeley.edu",
+        "name": "Test Student 41",
+        "sid": "3033030041",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 42,
+        "exam_id": 1,
+        "canvas_id": "500042",
+        "email": "student42@berkeley.edu",
+        "name": "Test Student 42",
+        "sid": "3033030042",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 43,
+        "exam_id": 1,
+        "canvas_id": "500043",
+        "email": "student43@berkeley.edu",
+        "name": "Test Student 43",
+        "sid": "3033030043",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 44,
+        "exam_id": 1,
+        "canvas_id": "500044",
+        "email": "student44@berkeley.edu",
+        "name": "Test Student 44",
+        "sid": "3033030044",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 45,
+        "exam_id": 1,
+        "canvas_id": "500045",
+        "email": "student45@berkeley.edu",
+        "name": "Test Student 45",
+        "sid": "3033030045",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 46,
+        "exam_id": 1,
+        "canvas_id": "500046",
+        "email": "student46@berkeley.edu",
+        "name": "Test Student 46",
+        "sid": "3033030046",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 47,
+        "exam_id": 1,
+        "canvas_id": "500047",
+        "email": "student47@berkeley.edu",
+        "name": "Test Student 47",
+        "sid": "3033030047",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 48,
+        "exam_id": 1,
+        "canvas_id": "500048",
+        "email": "student48@berkeley.edu",
+        "name": "Test Student 48",
+        "sid": "3033030048",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 49,
+        "exam_id": 1,
+        "canvas_id": "500049",
+        "email": "student49@berkeley.edu",
+        "name": "Test Student 49",
+        "sid": "3033030049",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 50,
+        "exam_id": 1,
+        "canvas_id": "500050",
+        "email": "student50@berkeley.edu",
+        "name": "Test Student 50",
+        "sid": "3033030050",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 51,
+        "exam_id": 1,
+        "canvas_id": "500051",
+        "email": "student51@berkeley.edu",
+        "name": "Test Student 51",
+        "sid": "3033030051",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 52,
+        "exam_id": 1,
+        "canvas_id": "500052",
+        "email": "student52@berkeley.edu",
+        "name": "Test Student 52",
+        "sid": "3033030052",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 53,
+        "exam_id": 1,
+        "canvas_id": "500053",
+        "email": "student53@berkeley.edu",
+        "name": "Test Student 53",
+        "sid": "3033030053",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 54,
+        "exam_id": 1,
+        "canvas_id": "500054",
+        "email": "student54@berkeley.edu",
+        "name": "Test Student 54",
+        "sid": "3033030054",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 55,
+        "exam_id": 1,
+        "canvas_id": "500055",
+        "email": "student55@berkeley.edu",
+        "name": "Test Student 55",
+        "sid": "3033030055",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 56,
+        "exam_id": 1,
+        "canvas_id": "500056",
+        "email": "student56@berkeley.edu",
+        "name": "Test Student 56",
+        "sid": "3033030056",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 57,
+        "exam_id": 1,
+        "canvas_id": "500057",
+        "email": "student57@berkeley.edu",
+        "name": "Test Student 57",
+        "sid": "3033030057",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 58,
+        "exam_id": 1,
+        "canvas_id": "500058",
+        "email": "student58@berkeley.edu",
+        "name": "Test Student 58",
+        "sid": "3033030058",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 59,
+        "exam_id": 1,
+        "canvas_id": "500059",
+        "email": "student59@berkeley.edu",
+        "name": "Test Student 59",
+        "sid": "3033030059",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 60,
+        "exam_id": 1,
+        "canvas_id": "500060",
+        "email": "student60@berkeley.edu",
+        "name": "Test Student 60",
+        "sid": "3033030060",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 61,
+        "exam_id": 1,
+        "canvas_id": "500061",
+        "email": "student61@berkeley.edu",
+        "name": "Test Student 61",
+        "sid": "3033030061",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 62,
+        "exam_id": 1,
+        "canvas_id": "500062",
+        "email": "student62@berkeley.edu",
+        "name": "Test Student 62",
+        "sid": "3033030062",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 63,
+        "exam_id": 1,
+        "canvas_id": "500063",
+        "email": "student63@berkeley.edu",
+        "name": "Test Student 63",
+        "sid": "3033030063",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 64,
+        "exam_id": 1,
+        "canvas_id": "500064",
+        "email": "student64@berkeley.edu",
+        "name": "Test Student 64",
+        "sid": "3033030064",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 65,
+        "exam_id": 1,
+        "canvas_id": "500065",
+        "email": "student65@berkeley.edu",
+        "name": "Test Student 65",
+        "sid": "3033030065",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 66,
+        "exam_id": 1,
+        "canvas_id": "500066",
+        "email": "student66@berkeley.edu",
+        "name": "Test Student 66",
+        "sid": "3033030066",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 67,
+        "exam_id": 1,
+        "canvas_id": "500067",
+        "email": "student67@berkeley.edu",
+        "name": "Test Student 67",
+        "sid": "3033030067",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 68,
+        "exam_id": 1,
+        "canvas_id": "500068",
+        "email": "student68@berkeley.edu",
+        "name": "Test Student 68",
+        "sid": "3033030068",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 69,
+        "exam_id": 1,
+        "canvas_id": "500069",
+        "email": "student69@berkeley.edu",
+        "name": "Test Student 69",
+        "sid": "3033030069",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 70,
+        "exam_id": 1,
+        "canvas_id": "500070",
+        "email": "student70@berkeley.edu",
+        "name": "Test Student 70",
+        "sid": "3033030070",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 71,
+        "exam_id": 1,
+        "canvas_id": "500071",
+        "email": "student71@berkeley.edu",
+        "name": "Test Student 71",
+        "sid": "3033030071",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 72,
+        "exam_id": 1,
+        "canvas_id": "500072",
+        "email": "student72@berkeley.edu",
+        "name": "Test Student 72",
+        "sid": "3033030072",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 73,
+        "exam_id": 1,
+        "canvas_id": "500073",
+        "email": "student73@berkeley.edu",
+        "name": "Test Student 73",
+        "sid": "3033030073",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 74,
+        "exam_id": 1,
+        "canvas_id": "500074",
+        "email": "student74@berkeley.edu",
+        "name": "Test Student 74",
+        "sid": "3033030074",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 75,
+        "exam_id": 1,
+        "canvas_id": "500075",
+        "email": "student75@berkeley.edu",
+        "name": "Test Student 75",
+        "sid": "3033030075",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 76,
+        "exam_id": 1,
+        "canvas_id": "500076",
+        "email": "student76@berkeley.edu",
+        "name": "Test Student 76",
+        "sid": "3033030076",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 77,
+        "exam_id": 1,
+        "canvas_id": "500077",
+        "email": "student77@berkeley.edu",
+        "name": "Test Student 77",
+        "sid": "3033030077",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 78,
+        "exam_id": 1,
+        "canvas_id": "500078",
+        "email": "student78@berkeley.edu",
+        "name": "Test Student 78",
+        "sid": "3033030078",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 79,
+        "exam_id": 1,
+        "canvas_id": "500079",
+        "email": "student79@berkeley.edu",
+        "name": "Test Student 79",
+        "sid": "3033030079",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 80,
+        "exam_id": 1,
+        "canvas_id": "500080",
+        "email": "student80@berkeley.edu",
+        "name": "Test Student 80",
+        "sid": "3033030080",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 81,
+        "exam_id": 1,
+        "canvas_id": "500081",
+        "email": "student81@berkeley.edu",
+        "name": "Test Student 81",
+        "sid": "3033030081",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 82,
+        "exam_id": 1,
+        "canvas_id": "500082",
+        "email": "student82@berkeley.edu",
+        "name": "Test Student 82",
+        "sid": "3033030082",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 83,
+        "exam_id": 1,
+        "canvas_id": "500083",
+        "email": "student83@berkeley.edu",
+        "name": "Test Student 83",
+        "sid": "3033030083",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 84,
+        "exam_id": 1,
+        "canvas_id": "500084",
+        "email": "student84@berkeley.edu",
+        "name": "Test Student 84",
+        "sid": "3033030084",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 85,
+        "exam_id": 1,
+        "canvas_id": "500085",
+        "email": "student85@berkeley.edu",
+        "name": "Test Student 85",
+        "sid": "3033030085",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 86,
+        "exam_id": 1,
+        "canvas_id": "500086",
+        "email": "student86@berkeley.edu",
+        "name": "Test Student 86",
+        "sid": "3033030086",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 87,
+        "exam_id": 1,
+        "canvas_id": "500087",
+        "email": "student87@berkeley.edu",
+        "name": "Test Student 87",
+        "sid": "3033030087",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 88,
+        "exam_id": 1,
+        "canvas_id": "500088",
+        "email": "student88@berkeley.edu",
+        "name": "Test Student 88",
+        "sid": "3033030088",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 89,
+        "exam_id": 1,
+        "canvas_id": "500089",
+        "email": "student89@berkeley.edu",
+        "name": "Test Student 89",
+        "sid": "3033030089",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 90,
+        "exam_id": 1,
+        "canvas_id": "500090",
+        "email": "student90@berkeley.edu",
+        "name": "Test Student 90",
+        "sid": "3033030090",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 91,
+        "exam_id": 1,
+        "canvas_id": "500091",
+        "email": "student91@berkeley.edu",
+        "name": "Test Student 91",
+        "sid": "3033030091",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 92,
+        "exam_id": 1,
+        "canvas_id": "500092",
+        "email": "student92@berkeley.edu",
+        "name": "Test Student 92",
+        "sid": "3033030092",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 93,
+        "exam_id": 1,
+        "canvas_id": "500093",
+        "email": "student93@berkeley.edu",
+        "name": "Test Student 93",
+        "sid": "3033030093",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 94,
+        "exam_id": 1,
+        "canvas_id": "500094",
+        "email": "student94@berkeley.edu",
+        "name": "Test Student 94",
+        "sid": "3033030094",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 95,
+        "exam_id": 1,
+        "canvas_id": "500095",
+        "email": "student95@berkeley.edu",
+        "name": "Test Student 95",
+        "sid": "3033030095",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 96,
+        "exam_id": 1,
+        "canvas_id": "500096",
+        "email": "student96@berkeley.edu",
+        "name": "Test Student 96",
+        "sid": "3033030096",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 97,
+        "exam_id": 1,
+        "canvas_id": "500097",
+        "email": "student97@berkeley.edu",
+        "name": "Test Student 97",
+        "sid": "3033030097",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 98,
+        "exam_id": 1,
+        "canvas_id": "500098",
+        "email": "student98@berkeley.edu",
+        "name": "Test Student 98",
+        "sid": "3033030098",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 99,
+        "exam_id": 1,
+        "canvas_id": "500099",
+        "email": "student99@berkeley.edu",
+        "name": "Test Student 99",
+        "sid": "3033030099",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 100,
+        "exam_id": 1,
+        "canvas_id": "500100",
+        "email": "student100@berkeley.edu",
+        "name": "Test Student 100",
+        "sid": "3033030100",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 101,
+        "exam_id": 1,
+        "canvas_id": "500101",
+        "email": "student101@berkeley.edu",
+        "name": "Test Student 101",
+        "sid": "3033030101",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 102,
+        "exam_id": 1,
+        "canvas_id": "500102",
+        "email": "student102@berkeley.edu",
+        "name": "Test Student 102",
+        "sid": "3033030102",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 103,
+        "exam_id": 1,
+        "canvas_id": "500103",
+        "email": "student103@berkeley.edu",
+        "name": "Test Student 103",
+        "sid": "3033030103",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 104,
+        "exam_id": 1,
+        "canvas_id": "500104",
+        "email": "student104@berkeley.edu",
+        "name": "Test Student 104",
+        "sid": "3033030104",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 105,
+        "exam_id": 1,
+        "canvas_id": "500105",
+        "email": "student105@berkeley.edu",
+        "name": "Test Student 105",
+        "sid": "3033030105",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 106,
+        "exam_id": 1,
+        "canvas_id": "500106",
+        "email": "student106@berkeley.edu",
+        "name": "Test Student 106",
+        "sid": "3033030106",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 107,
+        "exam_id": 1,
+        "canvas_id": "500107",
+        "email": "student107@berkeley.edu",
+        "name": "Test Student 107",
+        "sid": "3033030107",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 108,
+        "exam_id": 1,
+        "canvas_id": "500108",
+        "email": "student108@berkeley.edu",
+        "name": "Test Student 108",
+        "sid": "3033030108",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 109,
+        "exam_id": 1,
+        "canvas_id": "500109",
+        "email": "student109@berkeley.edu",
+        "name": "Test Student 109",
+        "sid": "3033030109",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 110,
+        "exam_id": 1,
+        "canvas_id": "500110",
+        "email": "student110@berkeley.edu",
+        "name": "Test Student 110",
+        "sid": "3033030110",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 111,
+        "exam_id": 1,
+        "canvas_id": "500111",
+        "email": "student111@berkeley.edu",
+        "name": "Test Student 111",
+        "sid": "3033030111",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 112,
+        "exam_id": 1,
+        "canvas_id": "500112",
+        "email": "student112@berkeley.edu",
+        "name": "Test Student 112",
+        "sid": "3033030112",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 113,
+        "exam_id": 1,
+        "canvas_id": "500113",
+        "email": "student113@berkeley.edu",
+        "name": "Test Student 113",
+        "sid": "3033030113",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 114,
+        "exam_id": 1,
+        "canvas_id": "500114",
+        "email": "student114@berkeley.edu",
+        "name": "Test Student 114",
+        "sid": "3033030114",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 115,
+        "exam_id": 1,
+        "canvas_id": "500115",
+        "email": "student115@berkeley.edu",
+        "name": "Test Student 115",
+        "sid": "3033030115",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 116,
+        "exam_id": 1,
+        "canvas_id": "500116",
+        "email": "student116@berkeley.edu",
+        "name": "Test Student 116",
+        "sid": "3033030116",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 117,
+        "exam_id": 1,
+        "canvas_id": "500117",
+        "email": "student117@berkeley.edu",
+        "name": "Test Student 117",
+        "sid": "3033030117",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 118,
+        "exam_id": 1,
+        "canvas_id": "500118",
+        "email": "student118@berkeley.edu",
+        "name": "Test Student 118",
+        "sid": "3033030118",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 119,
+        "exam_id": 1,
+        "canvas_id": "500119",
+        "email": "student119@berkeley.edu",
+        "name": "Test Student 119",
+        "sid": "3033030119",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 120,
+        "exam_id": 1,
+        "canvas_id": "500120",
+        "email": "student120@berkeley.edu",
+        "name": "Test Student 120",
+        "sid": "3033030120",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 121,
+        "exam_id": 1,
+        "canvas_id": "500121",
+        "email": "student121@berkeley.edu",
+        "name": "Test Student 121",
+        "sid": "3033030121",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 122,
+        "exam_id": 1,
+        "canvas_id": "500122",
+        "email": "student122@berkeley.edu",
+        "name": "Test Student 122",
+        "sid": "3033030122",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 123,
+        "exam_id": 1,
+        "canvas_id": "500123",
+        "email": "student123@berkeley.edu",
+        "name": "Test Student 123",
+        "sid": "3033030123",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 124,
+        "exam_id": 1,
+        "canvas_id": "500124",
+        "email": "student124@berkeley.edu",
+        "name": "Test Student 124",
+        "sid": "3033030124",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 125,
+        "exam_id": 1,
+        "canvas_id": "500125",
+        "email": "student125@berkeley.edu",
+        "name": "Test Student 125",
+        "sid": "3033030125",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 126,
+        "exam_id": 1,
+        "canvas_id": "500126",
+        "email": "student126@berkeley.edu",
+        "name": "Test Student 126",
+        "sid": "3033030126",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 127,
+        "exam_id": 1,
+        "canvas_id": "500127",
+        "email": "student127@berkeley.edu",
+        "name": "Test Student 127",
+        "sid": "3033030127",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 128,
+        "exam_id": 1,
+        "canvas_id": "500128",
+        "email": "student128@berkeley.edu",
+        "name": "Test Student 128",
+        "sid": "3033030128",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 129,
+        "exam_id": 1,
+        "canvas_id": "500129",
+        "email": "student129@berkeley.edu",
+        "name": "Test Student 129",
+        "sid": "3033030129",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 130,
+        "exam_id": 1,
+        "canvas_id": "500130",
+        "email": "student130@berkeley.edu",
+        "name": "Test Student 130",
+        "sid": "3033030130",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 131,
+        "exam_id": 1,
+        "canvas_id": "500131",
+        "email": "student131@berkeley.edu",
+        "name": "Test Student 131",
+        "sid": "3033030131",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 132,
+        "exam_id": 1,
+        "canvas_id": "500132",
+        "email": "student132@berkeley.edu",
+        "name": "Test Student 132",
+        "sid": "3033030132",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 133,
+        "exam_id": 1,
+        "canvas_id": "500133",
+        "email": "student133@berkeley.edu",
+        "name": "Test Student 133",
+        "sid": "3033030133",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 134,
+        "exam_id": 1,
+        "canvas_id": "500134",
+        "email": "student134@berkeley.edu",
+        "name": "Test Student 134",
+        "sid": "3033030134",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 135,
+        "exam_id": 1,
+        "canvas_id": "500135",
+        "email": "student135@berkeley.edu",
+        "name": "Test Student 135",
+        "sid": "3033030135",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 136,
+        "exam_id": 1,
+        "canvas_id": "500136",
+        "email": "student136@berkeley.edu",
+        "name": "Test Student 136",
+        "sid": "3033030136",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 137,
+        "exam_id": 1,
+        "canvas_id": "500137",
+        "email": "student137@berkeley.edu",
+        "name": "Test Student 137",
+        "sid": "3033030137",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 138,
+        "exam_id": 1,
+        "canvas_id": "500138",
+        "email": "student138@berkeley.edu",
+        "name": "Test Student 138",
+        "sid": "3033030138",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 139,
+        "exam_id": 1,
+        "canvas_id": "500139",
+        "email": "student139@berkeley.edu",
+        "name": "Test Student 139",
+        "sid": "3033030139",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 140,
+        "exam_id": 1,
+        "canvas_id": "500140",
+        "email": "student140@berkeley.edu",
+        "name": "Test Student 140",
+        "sid": "3033030140",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 141,
+        "exam_id": 1,
+        "canvas_id": "500141",
+        "email": "student141@berkeley.edu",
+        "name": "Test Student 141",
+        "sid": "3033030141",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 142,
+        "exam_id": 1,
+        "canvas_id": "500142",
+        "email": "student142@berkeley.edu",
+        "name": "Test Student 142",
+        "sid": "3033030142",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 143,
+        "exam_id": 1,
+        "canvas_id": "500143",
+        "email": "student143@berkeley.edu",
+        "name": "Test Student 143",
+        "sid": "3033030143",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 144,
+        "exam_id": 1,
+        "canvas_id": "500144",
+        "email": "student144@berkeley.edu",
+        "name": "Test Student 144",
+        "sid": "3033030144",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 145,
+        "exam_id": 1,
+        "canvas_id": "500145",
+        "email": "student145@berkeley.edu",
+        "name": "Test Student 145",
+        "sid": "3033030145",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 146,
+        "exam_id": 1,
+        "canvas_id": "500146",
+        "email": "student146@berkeley.edu",
+        "name": "Test Student 146",
+        "sid": "3033030146",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 147,
+        "exam_id": 1,
+        "canvas_id": "500147",
+        "email": "student147@berkeley.edu",
+        "name": "Test Student 147",
+        "sid": "3033030147",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 148,
+        "exam_id": 1,
+        "canvas_id": "500148",
+        "email": "student148@berkeley.edu",
+        "name": "Test Student 148",
+        "sid": "3033030148",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 149,
+        "exam_id": 1,
+        "canvas_id": "500149",
+        "email": "student149@berkeley.edu",
+        "name": "Test Student 149",
+        "sid": "3033030149",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 150,
+        "exam_id": 1,
+        "canvas_id": "500150",
+        "email": "student150@berkeley.edu",
+        "name": "Test Student 150",
+        "sid": "3033030150",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 151,
+        "exam_id": 1,
+        "canvas_id": "500151",
+        "email": "student151@berkeley.edu",
+        "name": "Test Student 151",
+        "sid": "3033030151",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 152,
+        "exam_id": 1,
+        "canvas_id": "500152",
+        "email": "student152@berkeley.edu",
+        "name": "Test Student 152",
+        "sid": "3033030152",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 153,
+        "exam_id": 1,
+        "canvas_id": "500153",
+        "email": "student153@berkeley.edu",
+        "name": "Test Student 153",
+        "sid": "3033030153",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 154,
+        "exam_id": 1,
+        "canvas_id": "500154",
+        "email": "student154@berkeley.edu",
+        "name": "Test Student 154",
+        "sid": "3033030154",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 155,
+        "exam_id": 1,
+        "canvas_id": "500155",
+        "email": "student155@berkeley.edu",
+        "name": "Test Student 155",
+        "sid": "3033030155",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 156,
+        "exam_id": 1,
+        "canvas_id": "500156",
+        "email": "student156@berkeley.edu",
+        "name": "Test Student 156",
+        "sid": "3033030156",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 157,
+        "exam_id": 1,
+        "canvas_id": "500157",
+        "email": "student157@berkeley.edu",
+        "name": "Test Student 157",
+        "sid": "3033030157",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 158,
+        "exam_id": 1,
+        "canvas_id": "500158",
+        "email": "student158@berkeley.edu",
+        "name": "Test Student 158",
+        "sid": "3033030158",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 159,
+        "exam_id": 1,
+        "canvas_id": "500159",
+        "email": "student159@berkeley.edu",
+        "name": "Test Student 159",
+        "sid": "3033030159",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 160,
+        "exam_id": 1,
+        "canvas_id": "500160",
+        "email": "student160@berkeley.edu",
+        "name": "Test Student 160",
+        "sid": "3033030160",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 161,
+        "exam_id": 1,
+        "canvas_id": "500161",
+        "email": "student161@berkeley.edu",
+        "name": "Test Student 161",
+        "sid": "3033030161",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 162,
+        "exam_id": 1,
+        "canvas_id": "500162",
+        "email": "student162@berkeley.edu",
+        "name": "Test Student 162",
+        "sid": "3033030162",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 163,
+        "exam_id": 1,
+        "canvas_id": "500163",
+        "email": "student163@berkeley.edu",
+        "name": "Test Student 163",
+        "sid": "3033030163",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 164,
+        "exam_id": 1,
+        "canvas_id": "500164",
+        "email": "student164@berkeley.edu",
+        "name": "Test Student 164",
+        "sid": "3033030164",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 165,
+        "exam_id": 1,
+        "canvas_id": "500165",
+        "email": "student165@berkeley.edu",
+        "name": "Test Student 165",
+        "sid": "3033030165",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 166,
+        "exam_id": 1,
+        "canvas_id": "500166",
+        "email": "student166@berkeley.edu",
+        "name": "Test Student 166",
+        "sid": "3033030166",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 167,
+        "exam_id": 1,
+        "canvas_id": "500167",
+        "email": "student167@berkeley.edu",
+        "name": "Test Student 167",
+        "sid": "3033030167",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 168,
+        "exam_id": 1,
+        "canvas_id": "500168",
+        "email": "student168@berkeley.edu",
+        "name": "Test Student 168",
+        "sid": "3033030168",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 169,
+        "exam_id": 1,
+        "canvas_id": "500169",
+        "email": "student169@berkeley.edu",
+        "name": "Test Student 169",
+        "sid": "3033030169",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 170,
+        "exam_id": 1,
+        "canvas_id": "500170",
+        "email": "student170@berkeley.edu",
+        "name": "Test Student 170",
+        "sid": "3033030170",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 171,
+        "exam_id": 1,
+        "canvas_id": "500171",
+        "email": "student171@berkeley.edu",
+        "name": "Test Student 171",
+        "sid": "3033030171",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 172,
+        "exam_id": 1,
+        "canvas_id": "500172",
+        "email": "student172@berkeley.edu",
+        "name": "Test Student 172",
+        "sid": "3033030172",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 173,
+        "exam_id": 1,
+        "canvas_id": "500173",
+        "email": "student173@berkeley.edu",
+        "name": "Test Student 173",
+        "sid": "3033030173",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 174,
+        "exam_id": 1,
+        "canvas_id": "500174",
+        "email": "student174@berkeley.edu",
+        "name": "Test Student 174",
+        "sid": "3033030174",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 175,
+        "exam_id": 1,
+        "canvas_id": "500175",
+        "email": "student175@berkeley.edu",
+        "name": "Test Student 175",
+        "sid": "3033030175",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 176,
+        "exam_id": 1,
+        "canvas_id": "500176",
+        "email": "student176@berkeley.edu",
+        "name": "Test Student 176",
+        "sid": "3033030176",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 177,
+        "exam_id": 1,
+        "canvas_id": "500177",
+        "email": "student177@berkeley.edu",
+        "name": "Test Student 177",
+        "sid": "3033030177",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 178,
+        "exam_id": 1,
+        "canvas_id": "500178",
+        "email": "student178@berkeley.edu",
+        "name": "Test Student 178",
+        "sid": "3033030178",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 179,
+        "exam_id": 1,
+        "canvas_id": "500179",
+        "email": "student179@berkeley.edu",
+        "name": "Test Student 179",
+        "sid": "3033030179",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 180,
+        "exam_id": 1,
+        "canvas_id": "500180",
+        "email": "student180@berkeley.edu",
+        "name": "Test Student 180",
+        "sid": "3033030180",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 181,
+        "exam_id": 1,
+        "canvas_id": "500181",
+        "email": "student181@berkeley.edu",
+        "name": "Test Student 181",
+        "sid": "3033030181",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 182,
+        "exam_id": 1,
+        "canvas_id": "500182",
+        "email": "student182@berkeley.edu",
+        "name": "Test Student 182",
+        "sid": "3033030182",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 183,
+        "exam_id": 1,
+        "canvas_id": "500183",
+        "email": "student183@berkeley.edu",
+        "name": "Test Student 183",
+        "sid": "3033030183",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 184,
+        "exam_id": 1,
+        "canvas_id": "500184",
+        "email": "student184@berkeley.edu",
+        "name": "Test Student 184",
+        "sid": "3033030184",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 185,
+        "exam_id": 1,
+        "canvas_id": "500185",
+        "email": "student185@berkeley.edu",
+        "name": "Test Student 185",
+        "sid": "3033030185",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 186,
+        "exam_id": 1,
+        "canvas_id": "500186",
+        "email": "student186@berkeley.edu",
+        "name": "Test Student 186",
+        "sid": "3033030186",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 187,
+        "exam_id": 1,
+        "canvas_id": "500187",
+        "email": "student187@berkeley.edu",
+        "name": "Test Student 187",
+        "sid": "3033030187",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 188,
+        "exam_id": 1,
+        "canvas_id": "500188",
+        "email": "student188@berkeley.edu",
+        "name": "Test Student 188",
+        "sid": "3033030188",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 189,
+        "exam_id": 1,
+        "canvas_id": "500189",
+        "email": "student189@berkeley.edu",
+        "name": "Test Student 189",
+        "sid": "3033030189",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 190,
+        "exam_id": 1,
+        "canvas_id": "500190",
+        "email": "student190@berkeley.edu",
+        "name": "Test Student 190",
+        "sid": "3033030190",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 191,
+        "exam_id": 1,
+        "canvas_id": "500191",
+        "email": "student191@berkeley.edu",
+        "name": "Test Student 191",
+        "sid": "3033030191",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 192,
+        "exam_id": 1,
+        "canvas_id": "500192",
+        "email": "student192@berkeley.edu",
+        "name": "Test Student 192",
+        "sid": "3033030192",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 193,
+        "exam_id": 1,
+        "canvas_id": "500193",
+        "email": "student193@berkeley.edu",
+        "name": "Test Student 193",
+        "sid": "3033030193",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 194,
+        "exam_id": 1,
+        "canvas_id": "500194",
+        "email": "student194@berkeley.edu",
+        "name": "Test Student 194",
+        "sid": "3033030194",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 195,
+        "exam_id": 1,
+        "canvas_id": "500195",
+        "email": "student195@berkeley.edu",
+        "name": "Test Student 195",
+        "sid": "3033030195",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 196,
+        "exam_id": 1,
+        "canvas_id": "500196",
+        "email": "student196@berkeley.edu",
+        "name": "Test Student 196",
+        "sid": "3033030196",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 197,
+        "exam_id": 1,
+        "canvas_id": "500197",
+        "email": "student197@berkeley.edu",
+        "name": "Test Student 197",
+        "sid": "3033030197",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 198,
+        "exam_id": 1,
+        "canvas_id": "500198",
+        "email": "student198@berkeley.edu",
+        "name": "Test Student 198",
+        "sid": "3033030198",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 199,
+        "exam_id": 1,
+        "canvas_id": "500199",
+        "email": "student199@berkeley.edu",
+        "name": "Test Student 199",
+        "sid": "3033030199",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 200,
+        "exam_id": 1,
+        "canvas_id": "500200",
+        "email": "student200@berkeley.edu",
+        "name": "Test Student 200",
+        "sid": "3033030200",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 201,
+        "exam_id": 1,
+        "canvas_id": "500201",
+        "email": "student201@berkeley.edu",
+        "name": "Test Student 201",
+        "sid": "3033030201",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 202,
+        "exam_id": 1,
+        "canvas_id": "500202",
+        "email": "student202@berkeley.edu",
+        "name": "Test Student 202",
+        "sid": "3033030202",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 203,
+        "exam_id": 1,
+        "canvas_id": "500203",
+        "email": "student203@berkeley.edu",
+        "name": "Test Student 203",
+        "sid": "3033030203",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 204,
+        "exam_id": 1,
+        "canvas_id": "500204",
+        "email": "student204@berkeley.edu",
+        "name": "Test Student 204",
+        "sid": "3033030204",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 205,
+        "exam_id": 1,
+        "canvas_id": "500205",
+        "email": "student205@berkeley.edu",
+        "name": "Test Student 205",
+        "sid": "3033030205",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 206,
+        "exam_id": 1,
+        "canvas_id": "500206",
+        "email": "student206@berkeley.edu",
+        "name": "Test Student 206",
+        "sid": "3033030206",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 207,
+        "exam_id": 1,
+        "canvas_id": "500207",
+        "email": "student207@berkeley.edu",
+        "name": "Test Student 207",
+        "sid": "3033030207",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 208,
+        "exam_id": 1,
+        "canvas_id": "500208",
+        "email": "student208@berkeley.edu",
+        "name": "Test Student 208",
+        "sid": "3033030208",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 209,
+        "exam_id": 1,
+        "canvas_id": "500209",
+        "email": "student209@berkeley.edu",
+        "name": "Test Student 209",
+        "sid": "3033030209",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 210,
+        "exam_id": 1,
+        "canvas_id": "500210",
+        "email": "student210@berkeley.edu",
+        "name": "Test Student 210",
+        "sid": "3033030210",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 211,
+        "exam_id": 1,
+        "canvas_id": "500211",
+        "email": "student211@berkeley.edu",
+        "name": "Test Student 211",
+        "sid": "3033030211",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 212,
+        "exam_id": 1,
+        "canvas_id": "500212",
+        "email": "student212@berkeley.edu",
+        "name": "Test Student 212",
+        "sid": "3033030212",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 213,
+        "exam_id": 1,
+        "canvas_id": "500213",
+        "email": "student213@berkeley.edu",
+        "name": "Test Student 213",
+        "sid": "3033030213",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 214,
+        "exam_id": 1,
+        "canvas_id": "500214",
+        "email": "student214@berkeley.edu",
+        "name": "Test Student 214",
+        "sid": "3033030214",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 215,
+        "exam_id": 1,
+        "canvas_id": "500215",
+        "email": "student215@berkeley.edu",
+        "name": "Test Student 215",
+        "sid": "3033030215",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 216,
+        "exam_id": 1,
+        "canvas_id": "500216",
+        "email": "student216@berkeley.edu",
+        "name": "Test Student 216",
+        "sid": "3033030216",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 217,
+        "exam_id": 1,
+        "canvas_id": "500217",
+        "email": "student217@berkeley.edu",
+        "name": "Test Student 217",
+        "sid": "3033030217",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 218,
+        "exam_id": 1,
+        "canvas_id": "500218",
+        "email": "student218@berkeley.edu",
+        "name": "Test Student 218",
+        "sid": "3033030218",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 219,
+        "exam_id": 1,
+        "canvas_id": "500219",
+        "email": "student219@berkeley.edu",
+        "name": "Test Student 219",
+        "sid": "3033030219",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 220,
+        "exam_id": 1,
+        "canvas_id": "500220",
+        "email": "student220@berkeley.edu",
+        "name": "Test Student 220",
+        "sid": "3033030220",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 221,
+        "exam_id": 1,
+        "canvas_id": "500221",
+        "email": "student221@berkeley.edu",
+        "name": "Test Student 221",
+        "sid": "3033030221",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 222,
+        "exam_id": 1,
+        "canvas_id": "500222",
+        "email": "student222@berkeley.edu",
+        "name": "Test Student 222",
+        "sid": "3033030222",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 223,
+        "exam_id": 1,
+        "canvas_id": "500223",
+        "email": "student223@berkeley.edu",
+        "name": "Test Student 223",
+        "sid": "3033030223",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 224,
+        "exam_id": 1,
+        "canvas_id": "500224",
+        "email": "student224@berkeley.edu",
+        "name": "Test Student 224",
+        "sid": "3033030224",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 225,
+        "exam_id": 1,
+        "canvas_id": "500225",
+        "email": "student225@berkeley.edu",
+        "name": "Test Student 225",
+        "sid": "3033030225",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 226,
+        "exam_id": 1,
+        "canvas_id": "500226",
+        "email": "student226@berkeley.edu",
+        "name": "Test Student 226",
+        "sid": "3033030226",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 227,
+        "exam_id": 1,
+        "canvas_id": "500227",
+        "email": "student227@berkeley.edu",
+        "name": "Test Student 227",
+        "sid": "3033030227",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 228,
+        "exam_id": 1,
+        "canvas_id": "500228",
+        "email": "student228@berkeley.edu",
+        "name": "Test Student 228",
+        "sid": "3033030228",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 229,
+        "exam_id": 1,
+        "canvas_id": "500229",
+        "email": "student229@berkeley.edu",
+        "name": "Test Student 229",
+        "sid": "3033030229",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 230,
+        "exam_id": 1,
+        "canvas_id": "500230",
+        "email": "student230@berkeley.edu",
+        "name": "Test Student 230",
+        "sid": "3033030230",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 231,
+        "exam_id": 1,
+        "canvas_id": "500231",
+        "email": "student231@berkeley.edu",
+        "name": "Test Student 231",
+        "sid": "3033030231",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 232,
+        "exam_id": 1,
+        "canvas_id": "500232",
+        "email": "student232@berkeley.edu",
+        "name": "Test Student 232",
+        "sid": "3033030232",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 233,
+        "exam_id": 1,
+        "canvas_id": "500233",
+        "email": "student233@berkeley.edu",
+        "name": "Test Student 233",
+        "sid": "3033030233",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 234,
+        "exam_id": 1,
+        "canvas_id": "500234",
+        "email": "student234@berkeley.edu",
+        "name": "Test Student 234",
+        "sid": "3033030234",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 235,
+        "exam_id": 1,
+        "canvas_id": "500235",
+        "email": "student235@berkeley.edu",
+        "name": "Test Student 235",
+        "sid": "3033030235",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 236,
+        "exam_id": 1,
+        "canvas_id": "500236",
+        "email": "student236@berkeley.edu",
+        "name": "Test Student 236",
+        "sid": "3033030236",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 237,
+        "exam_id": 1,
+        "canvas_id": "500237",
+        "email": "student237@berkeley.edu",
+        "name": "Test Student 237",
+        "sid": "3033030237",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 238,
+        "exam_id": 1,
+        "canvas_id": "500238",
+        "email": "student238@berkeley.edu",
+        "name": "Test Student 238",
+        "sid": "3033030238",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 239,
+        "exam_id": 1,
+        "canvas_id": "500239",
+        "email": "student239@berkeley.edu",
+        "name": "Test Student 239",
+        "sid": "3033030239",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 240,
+        "exam_id": 1,
+        "canvas_id": "500240",
+        "email": "student240@berkeley.edu",
+        "name": "Test Student 240",
+        "sid": "3033030240",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 241,
+        "exam_id": 1,
+        "canvas_id": "500241",
+        "email": "student241@berkeley.edu",
+        "name": "Test Student 241",
+        "sid": "3033030241",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 242,
+        "exam_id": 1,
+        "canvas_id": "500242",
+        "email": "student242@berkeley.edu",
+        "name": "Test Student 242",
+        "sid": "3033030242",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 243,
+        "exam_id": 1,
+        "canvas_id": "500243",
+        "email": "student243@berkeley.edu",
+        "name": "Test Student 243",
+        "sid": "3033030243",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 244,
+        "exam_id": 1,
+        "canvas_id": "500244",
+        "email": "student244@berkeley.edu",
+        "name": "Test Student 244",
+        "sid": "3033030244",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 245,
+        "exam_id": 1,
+        "canvas_id": "500245",
+        "email": "student245@berkeley.edu",
+        "name": "Test Student 245",
+        "sid": "3033030245",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 246,
+        "exam_id": 1,
+        "canvas_id": "500246",
+        "email": "student246@berkeley.edu",
+        "name": "Test Student 246",
+        "sid": "3033030246",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 247,
+        "exam_id": 1,
+        "canvas_id": "500247",
+        "email": "student247@berkeley.edu",
+        "name": "Test Student 247",
+        "sid": "3033030247",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 248,
+        "exam_id": 1,
+        "canvas_id": "500248",
+        "email": "student248@berkeley.edu",
+        "name": "Test Student 248",
+        "sid": "3033030248",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 249,
+        "exam_id": 1,
+        "canvas_id": "500249",
+        "email": "student249@berkeley.edu",
+        "name": "Test Student 249",
+        "sid": "3033030249",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 250,
+        "exam_id": 1,
+        "canvas_id": "500250",
+        "email": "student250@berkeley.edu",
+        "name": "Test Student 250",
+        "sid": "3033030250",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 251,
+        "exam_id": 1,
+        "canvas_id": "500251",
+        "email": "student251@berkeley.edu",
+        "name": "Test Student 251",
+        "sid": "3033030251",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 252,
+        "exam_id": 1,
+        "canvas_id": "500252",
+        "email": "student252@berkeley.edu",
+        "name": "Test Student 252",
+        "sid": "3033030252",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 253,
+        "exam_id": 1,
+        "canvas_id": "500253",
+        "email": "student253@berkeley.edu",
+        "name": "Test Student 253",
+        "sid": "3033030253",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 254,
+        "exam_id": 1,
+        "canvas_id": "500254",
+        "email": "student254@berkeley.edu",
+        "name": "Test Student 254",
+        "sid": "3033030254",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 255,
+        "exam_id": 1,
+        "canvas_id": "500255",
+        "email": "student255@berkeley.edu",
+        "name": "Test Student 255",
+        "sid": "3033030255",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 256,
+        "exam_id": 1,
+        "canvas_id": "500256",
+        "email": "student256@berkeley.edu",
+        "name": "Test Student 256",
+        "sid": "3033030256",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 257,
+        "exam_id": 1,
+        "canvas_id": "500257",
+        "email": "student257@berkeley.edu",
+        "name": "Test Student 257",
+        "sid": "3033030257",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 258,
+        "exam_id": 1,
+        "canvas_id": "500258",
+        "email": "student258@berkeley.edu",
+        "name": "Test Student 258",
+        "sid": "3033030258",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 259,
+        "exam_id": 1,
+        "canvas_id": "500259",
+        "email": "student259@berkeley.edu",
+        "name": "Test Student 259",
+        "sid": "3033030259",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 260,
+        "exam_id": 1,
+        "canvas_id": "500260",
+        "email": "student260@berkeley.edu",
+        "name": "Test Student 260",
+        "sid": "3033030260",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 261,
+        "exam_id": 1,
+        "canvas_id": "500261",
+        "email": "student261@berkeley.edu",
+        "name": "Test Student 261",
+        "sid": "3033030261",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 262,
+        "exam_id": 1,
+        "canvas_id": "500262",
+        "email": "student262@berkeley.edu",
+        "name": "Test Student 262",
+        "sid": "3033030262",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 263,
+        "exam_id": 1,
+        "canvas_id": "500263",
+        "email": "student263@berkeley.edu",
+        "name": "Test Student 263",
+        "sid": "3033030263",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 264,
+        "exam_id": 1,
+        "canvas_id": "500264",
+        "email": "student264@berkeley.edu",
+        "name": "Test Student 264",
+        "sid": "3033030264",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 265,
+        "exam_id": 1,
+        "canvas_id": "500265",
+        "email": "student265@berkeley.edu",
+        "name": "Test Student 265",
+        "sid": "3033030265",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 266,
+        "exam_id": 1,
+        "canvas_id": "500266",
+        "email": "student266@berkeley.edu",
+        "name": "Test Student 266",
+        "sid": "3033030266",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 267,
+        "exam_id": 1,
+        "canvas_id": "500267",
+        "email": "student267@berkeley.edu",
+        "name": "Test Student 267",
+        "sid": "3033030267",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 268,
+        "exam_id": 1,
+        "canvas_id": "500268",
+        "email": "student268@berkeley.edu",
+        "name": "Test Student 268",
+        "sid": "3033030268",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 269,
+        "exam_id": 1,
+        "canvas_id": "500269",
+        "email": "student269@berkeley.edu",
+        "name": "Test Student 269",
+        "sid": "3033030269",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 270,
+        "exam_id": 1,
+        "canvas_id": "500270",
+        "email": "student270@berkeley.edu",
+        "name": "Test Student 270",
+        "sid": "3033030270",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 271,
+        "exam_id": 1,
+        "canvas_id": "500271",
+        "email": "student271@berkeley.edu",
+        "name": "Test Student 271",
+        "sid": "3033030271",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 272,
+        "exam_id": 1,
+        "canvas_id": "500272",
+        "email": "student272@berkeley.edu",
+        "name": "Test Student 272",
+        "sid": "3033030272",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 273,
+        "exam_id": 1,
+        "canvas_id": "500273",
+        "email": "student273@berkeley.edu",
+        "name": "Test Student 273",
+        "sid": "3033030273",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 274,
+        "exam_id": 1,
+        "canvas_id": "500274",
+        "email": "student274@berkeley.edu",
+        "name": "Test Student 274",
+        "sid": "3033030274",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 275,
+        "exam_id": 1,
+        "canvas_id": "500275",
+        "email": "student275@berkeley.edu",
+        "name": "Test Student 275",
+        "sid": "3033030275",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 276,
+        "exam_id": 1,
+        "canvas_id": "500276",
+        "email": "student276@berkeley.edu",
+        "name": "Test Student 276",
+        "sid": "3033030276",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 277,
+        "exam_id": 1,
+        "canvas_id": "500277",
+        "email": "student277@berkeley.edu",
+        "name": "Test Student 277",
+        "sid": "3033030277",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 278,
+        "exam_id": 1,
+        "canvas_id": "500278",
+        "email": "student278@berkeley.edu",
+        "name": "Test Student 278",
+        "sid": "3033030278",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 279,
+        "exam_id": 1,
+        "canvas_id": "500279",
+        "email": "student279@berkeley.edu",
+        "name": "Test Student 279",
+        "sid": "3033030279",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 280,
+        "exam_id": 1,
+        "canvas_id": "500280",
+        "email": "student280@berkeley.edu",
+        "name": "Test Student 280",
+        "sid": "3033030280",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 281,
+        "exam_id": 1,
+        "canvas_id": "500281",
+        "email": "student281@berkeley.edu",
+        "name": "Test Student 281",
+        "sid": "3033030281",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 282,
+        "exam_id": 1,
+        "canvas_id": "500282",
+        "email": "student282@berkeley.edu",
+        "name": "Test Student 282",
+        "sid": "3033030282",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 283,
+        "exam_id": 1,
+        "canvas_id": "500283",
+        "email": "student283@berkeley.edu",
+        "name": "Test Student 283",
+        "sid": "3033030283",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 284,
+        "exam_id": 1,
+        "canvas_id": "500284",
+        "email": "student284@berkeley.edu",
+        "name": "Test Student 284",
+        "sid": "3033030284",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 285,
+        "exam_id": 1,
+        "canvas_id": "500285",
+        "email": "student285@berkeley.edu",
+        "name": "Test Student 285",
+        "sid": "3033030285",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 286,
+        "exam_id": 1,
+        "canvas_id": "500286",
+        "email": "student286@berkeley.edu",
+        "name": "Test Student 286",
+        "sid": "3033030286",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 287,
+        "exam_id": 1,
+        "canvas_id": "500287",
+        "email": "student287@berkeley.edu",
+        "name": "Test Student 287",
+        "sid": "3033030287",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 288,
+        "exam_id": 1,
+        "canvas_id": "500288",
+        "email": "student288@berkeley.edu",
+        "name": "Test Student 288",
+        "sid": "3033030288",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 289,
+        "exam_id": 1,
+        "canvas_id": "500289",
+        "email": "student289@berkeley.edu",
+        "name": "Test Student 289",
+        "sid": "3033030289",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 290,
+        "exam_id": 1,
+        "canvas_id": "500290",
+        "email": "student290@berkeley.edu",
+        "name": "Test Student 290",
+        "sid": "3033030290",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 291,
+        "exam_id": 1,
+        "canvas_id": "500291",
+        "email": "student291@berkeley.edu",
+        "name": "Test Student 291",
+        "sid": "3033030291",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 292,
+        "exam_id": 1,
+        "canvas_id": "500292",
+        "email": "student292@berkeley.edu",
+        "name": "Test Student 292",
+        "sid": "3033030292",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 293,
+        "exam_id": 1,
+        "canvas_id": "500293",
+        "email": "student293@berkeley.edu",
+        "name": "Test Student 293",
+        "sid": "3033030293",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 294,
+        "exam_id": 1,
+        "canvas_id": "500294",
+        "email": "student294@berkeley.edu",
+        "name": "Test Student 294",
+        "sid": "3033030294",
+        "wants": [
+          "Lefty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 295,
+        "exam_id": 1,
+        "canvas_id": "500295",
+        "email": "student295@berkeley.edu",
+        "name": "Test Student 295",
+        "sid": "3033030295",
+        "wants": [
+          "Righty"
+        ],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 296,
+        "exam_id": 1,
+        "canvas_id": "500296",
+        "email": "student296@berkeley.edu",
+        "name": "Test Student 296",
+        "sid": "3033030296",
+        "wants": [],
+        "avoids": [
+          "Broken"
+        ],
+        "room_wants": [],
+        "room_avoids": []
+      },
+      {
+        "id": 297,
+        "exam_id": 1,
+        "canvas_id": "500297",
+        "email": "student297@berkeley.edu",
+        "name": "Test Student 297",
+        "sid": "3033030297",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "1"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 298,
+        "exam_id": 1,
+        "canvas_id": "500298",
+        "email": "student298@berkeley.edu",
+        "name": "Test Student 298",
+        "sid": "3033030298",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [
+          "2"
+        ],
+        "room_avoids": []
+      },
+      {
+        "id": 299,
+        "exam_id": 1,
+        "canvas_id": "500299",
+        "email": "student299@berkeley.edu",
+        "name": "Test Student 299",
+        "sid": "3033030299",
+        "wants": [],
+        "avoids": [],
+        "room_wants": [],
+        "room_avoids": [
+          "3"
+        ]
+      },
+      {
+        "id": 300,
+        "exam_id": 1,
+        "canvas_id": "500300",
+        "email": "student300@berkeley.edu",
+        "name": "Test Student 300",
+        "sid": "3033030300",
+        "wants": [],
+        "avoids": [],
         "room_wants": [],
         "room_avoids": []
       }
