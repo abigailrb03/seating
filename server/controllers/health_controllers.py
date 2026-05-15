@@ -1,4 +1,4 @@
-"""Lightweight JSON endpoints under ``/health`` used by operators to confirm uptime and observability.
+"""AI-generated docstring: Lightweight JSON endpoints under ``/health`` used by operators to confirm uptime and observability.
 
 This module exposes three read-only routes: a trivial process heartbeat, a database ``SELECT 1``
 smoke test that catches connection or migration issues early, and a logging probe that emits
@@ -16,7 +16,7 @@ from server.controllers import health_module
 
 @health_module.route('/')
 def check():
-    """Reports that the Python process is running and able to answer HTTP requests on this prefix.
+    """AI-generated docstring: Reports that the Python process is running and able to answer HTTP requests on this prefix.
 
     Returns:
         A tuple ``(json_response, status_code)`` where the JSON body is ``{"status": "UP"}``
@@ -27,7 +27,7 @@ def check():
 
 @health_module.route('/db')
 def check_db():
-    """Runs a trivial SQL statement through SQLAlchemy to verify the application database is reachable.
+    """AI-generated docstring: Runs a trivial SQL statement through SQLAlchemy to verify the application database is reachable.
 
     Returns:
         ``(jsonify({"status": "UP"}), 200)`` when ``SELECT 1`` executes without error, or
@@ -44,7 +44,7 @@ def check_db():
 
 @health_module.route('/log')
 def check_logging():
-    """Emits one log record at each built-in severity level to prove logging configuration works.
+    """AI-generated docstring: Emits one log record at each built-in severity level to prove logging configuration works.
 
     Returns:
         A tuple ``(jsonify({"status": "SEE LOGS"}), 200)`` after ``debug``, ``info``,

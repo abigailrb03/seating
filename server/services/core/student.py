@@ -1,3 +1,10 @@
+"""AI-generated docstring: Parse student roster spreadsheets and apply import strategies.
+
+Handles column headers for identity, seat preferences, room preferences, optional
+seat assignments, and configurable merge/overwrite/delete behavior via
+``StudentImportConfig``.
+"""
+
 from server.services.core.assign import get_preference_from_student, is_seat_valid_for_preference
 from server.typings.enum import AssignmentImportStrategy, \
     MissingRowImportStrategy, NewRowImportStrategy, UpdatedRowImportStrategy
@@ -10,6 +17,18 @@ SPECIAL_HEADERS = ['email', 'name', 'bcourses id', 'canvas id', 'student id', 'e
 
 
 class StudentImportConfig:
+    """AI-generated docstring: Options controlling how roster rows update the database.
+
+    Attributes:
+        revalidate_existing_assignments: When True, clear assignments that no longer
+            match the student's preferences after import.
+        assignment_import_strategy: How to apply seat ids or room/seat names from rows.
+        updated_preference_import_strategy: Merge or overwrite wants/avoids on updates.
+        updated_student_info_import_strategy: Merge or overwrite name, email, and sid.
+        new_student_import_strategy: Append or ignore rows for unknown canvas ids.
+        missing_student_import_strategy: Ignore or delete students absent from the sheet.
+    """
+
     def __init__(self, *, revalidate_existing_assignments=True,
                  assignment_import_strategy: AssignmentImportStrategy = AssignmentImportStrategy.REVALIDATE,
                  updated_student_info_import_strategy: UpdatedRowImportStrategy = UpdatedRowImportStrategy.MERGE,
@@ -17,6 +36,16 @@ class StudentImportConfig:
                  new_student_import_strategy: NewRowImportStrategy = NewRowImportStrategy.APPEND,
                  missing_student_import_strategy: MissingRowImportStrategy = MissingRowImportStrategy.IGNORE
                  ):
+        """AI-generated docstring: Store import flags passed from staff import forms.
+
+        Args:
+            revalidate_existing_assignments: Drop invalid seat assignments after prefs change.
+            assignment_import_strategy: Whether to import, force, revalidate, or ignore seats.
+            updated_student_info_import_strategy: How to update name, email, and sid fields.
+            updated_preference_import_strategy: How to update wants, avoids, and room prefs.
+            new_student_import_strategy: Whether new canvas ids create students or are skipped.
+            missing_student_import_strategy: Whether rows missing from the sheet delete students.
+        """
         self.revalidate_existing_assignments = revalidate_existing_assignments
         self.assignment_import_strategy = assignment_import_strategy
         self.updated_preference_import_strategy = updated_preference_import_strategy
@@ -26,35 +55,81 @@ class StudentImportConfig:
 
 
 def room_to_attr(room: Room):
+    """AI-generated docstring: Encode a ``Room`` as a spreadsheet column name ``room:<id>``."""
     return room_id_to_attr(room.id)
 
 
 def attr_to_room(attr: str) -> Room | None:
+    """AI-generated docstring: Look up a ``Room`` from a ``room:<id>`` column name.
+
+    Args:
+        attr: Column header such as ``room:3``.
+
+    Returns:
+        ``Room`` for that id, or ``None`` when ``attr`` is not a room column.
+    """
     room_id = attr_to_room_id(attr)
     return Room.query.get(int(room_id)) if room_id else None
 
 
 def room_id_to_attr(room_id: int):
+    """AI-generated docstring: Build the spreadsheet column name for a room preference.
+
+    Args:
+        room_id: Database primary key of the room.
+
+    Returns:
+        String ``room:<room_id>`` used as a CSV/Sheet column header.
+    """
     return f'room:{str(room_id)}'
 
 
 def attr_to_room_id(attr: str) -> None | str:
+    """AI-generated docstring: Extract the room id string from a ``room:<id>`` column name.
+
+    Args:
+        attr: Column header to parse.
+
+    Returns:
+        Room id substring after ``room:``, or ``None`` if ``attr`` is not a room column.
+    """
     if not is_room_attr(attr):
         return None
     return attr[5:]
 
 
 def is_normal_attr(attr: str):
+    """AI-generated docstring: Return True if ``attr`` is a seat preference column header."""
     return not is_room_attr(attr) and attr not in SPECIAL_HEADERS
 
 
 def is_room_attr(attr: str):
+    """AI-generated docstring: Return True if ``attr`` is a ``room:<id>`` preference column."""
     return attr.startswith('room:') and attr not in SPECIAL_HEADERS
 
 
 def prepare_students(exam, headers, rows, *, config: StudentImportConfig = StudentImportConfig()):
-    """
+    """TA-written docstring:
     Prepare a list of students from the spreadsheet data, for the given exam.
+
+    AI-generated docstring: Parse roster rows into new and updated ``Student`` instances.
+
+    Validates required columns, applies import strategies for info, preferences, and
+    assignments, and optionally collects ids of students to delete when missing from
+    the sheet.
+
+    Args:
+        exam: Exam students belong to.
+        headers: Column names present in the import (mutated indirectly via row pops).
+        rows: List of dicts, one per spreadsheet row.
+        config: Import behavior for new, updated, and missing students.
+
+    Returns:
+        Tuple ``(new_students, updated_students, invalid_students, students_ids_to_remove)``
+        where invalid rows are returned as dicts for error reporting.
+
+    Raises:
+        DataValidationError: When required columns (email, name, canvas id) are missing.
     """
     if 'email' not in headers:
         raise DataValidationError('Missing "email" column')

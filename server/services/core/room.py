@@ -1,12 +1,29 @@
+"""AI-generated docstring: Build ``Room`` and ``Seat`` objects from forms and spreadsheets."""
+
 from server.typings.exception import DataValidationError
 from server.models import Room, Seat, Student, slug
 from server.utils.date import to_ISO8601
 
 
 def prepare_room(exam, room_form):
-    """
+    """TA-written docstring:
     Prepare a room object from the form data that is associated with the given exam.
     We only need start_at, duration_minutes, and display_name from the room_form.
+
+    AI-generated docstring: Create a new ``Room`` for an exam from a WTForms room form.
+
+    Reads display name, start time, and duration from ``room_form``. Rejects duplicate
+    rooms that share the same slug name (and start time when provided).
+
+    Args:
+        exam: Exam the room belongs to.
+        room_form: Form with ``display_name``, ``start_at``, and ``duration_minutes``.
+
+    Returns:
+        Unsaved ``Room`` instance ready to attach seats and persist.
+
+    Raises:
+        DataValidationError: When a room with the same name and start time already exists.
     """
     room = Room(
         exam_id=exam.id,
@@ -34,9 +51,25 @@ def prepare_room(exam, room_form):
 
 
 def prepare_seat(headers, rows):  # noqa: C901
-    """
+    """TA-written docstring:
     Prepare a list of seats from the spreadsheet data.
     This spreadsheet data may come from a Google Sheet or a CSV file.
+
+    AI-generated docstring: Parse spreadsheet rows into fixed and movable ``Seat`` objects.
+
+    Fixed seats require ``row`` and ``seat`` columns; movable seats use a ``count``
+    column and optional attribute columns marked ``true``.
+
+    Args:
+        headers: Column names from the sheet (lowercased by callers where needed).
+        rows: List of row dicts; keys are popped as columns are consumed.
+
+    Returns:
+        List of unsaved ``Seat`` instances with coordinates, names, and attributes set.
+
+    Raises:
+        DataValidationError: When required columns are missing, names or coordinates
+            repeat, or coordinate overrides are not valid floats.
     """
     if 'row' not in headers or 'seat' not in headers:
         raise DataValidationError('Missing compulsory columns "row" and/or "seat"')

@@ -1,4 +1,4 @@
-"""Development-only routes that emulate Canvas OAuth when ``MOCK_CANVAS`` is enabled in configuration.
+"""AI-generated docstring: Development-only routes that emulate Canvas OAuth when ``MOCK_CANVAS`` is enabled in configuration.
 
 This module exposes a simple HTML form for picking a fake user id, minimal ``/oauth2/auth``
 and ``/oauth2/token`` endpoints that behave enough like Canvas for local testing without
@@ -19,7 +19,7 @@ from server.services.canvas.fake_data import FAKE_USERS
 
 @dev_login_module.route('/', methods=['GET', 'POST'])
 def dev_login_page():
-    """Renders the mock user picker form or redirects visitors away when Canvas is not mocked.
+    """AI-generated docstring: Renders the mock user picker form or redirects visitors away when Canvas is not mocked.
 
     Returns:
         An HTML page with ``DevLoginForm`` when ``MOCK_CANVAS`` is true, an HTTP redirect
@@ -46,7 +46,7 @@ def dev_login_page():
 
 @dev_login_module.route('/oauth2/auth/', methods=['GET'])
 def mock_authorize():
-    """Imitates Canvas's authorization redirect by appending a fake ``code`` and ``state`` query pair.
+    """AI-generated docstring: Imitates Canvas's authorization redirect by appending a fake ``code`` and ``state`` query pair.
 
     Returns:
         An HTTP 302 redirect whose ``Location`` header points at the ``redirect_uri`` query
@@ -70,7 +70,7 @@ def mock_authorize():
 
 @dev_login_module.route('/oauth2/token/', methods=['POST'])
 def mock_token():
-    """Returns a canned JSON access-token payload that mirrors Canvas's token endpoint shape for tests.
+    """AI-generated docstring: Returns a canned JSON access-token payload that mirrors Canvas's token endpoint shape for tests.
 
     Returns:
         A Flask ``jsonify`` response whose body includes ``access_token``, ``user`` metadata

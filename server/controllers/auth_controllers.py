@@ -1,4 +1,4 @@
-"""HTTP routes for real Canvas OAuth login, the OAuth callback, and logging out of the seating app.
+"""AI-generated docstring: HTTP routes for real Canvas OAuth login, the OAuth callback, and logging out of the seating app.
 
 This module registers view functions on the ``auth`` blueprint: ``/login/`` starts the
 Canvas authorization flow (or redirects to the mock dev login page when ``MOCK_CANVAS`` is
@@ -22,7 +22,7 @@ from server.services.auth import oauth_provider
 
 @auth_module.route('/login/')
 def login():
-    """Starts Canvas OAuth for signed-out visitors, or sends mock-mode users to the dev login screen.
+    """AI-generated docstring: Starts Canvas OAuth for signed-out visitors, or sends mock-mode users to the dev login screen.
 
     Returns:
         A werkzeug ``Response`` that is either an HTTP redirect to the development login
@@ -38,7 +38,7 @@ def login():
 
 @auth_module.route('/authorized/')
 def authorized():
-    """Completes the OAuth handshake, persists Canvas-derived course lists, and logs the user in.
+    """AI-generated docstring: Completes the OAuth handshake, persists Canvas-derived course lists, and logs the user in.
 
     Canvas redirects the browser here after the user approves access. This view reads the
     token response, fetches the Canvas user and active course enrollments, updates or
@@ -82,7 +82,7 @@ def authorized():
 @auth_module.route('/logout/')
 @login_required
 def logout():
-    """Clears the Flask session and Flask-Login state so the current browser is fully signed out.
+    """AI-generated docstring: Clears the Flask session and Flask-Login state so the current browser is fully signed out.
 
     Returns:
         An HTTP redirect response to the public index route after ``session.clear()`` and

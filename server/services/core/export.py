@@ -1,3 +1,5 @@
+"""AI-generated docstring: Export exam roster and preference data to CSV for staff download."""
+
 from server.services.core.assign import get_preference_from_student
 from server.services.core.student import room_id_to_attr
 from server.services.csv import to_csv_str
@@ -5,8 +7,19 @@ from flask import url_for
 
 
 def export_exam_student_info(exam) -> str:
-    """
+    """TA-written docstring:
     Export exam student info to a CSV file.
+
+    AI-generated docstring: Build a CSV string of all students in an exam.
+
+    Each row includes identity fields, assignment details (if any), preference
+    columns (``true``/``false``), and room preference columns (``room:<id>``).
+
+    Args:
+        exam: Exam whose ``students`` relationship is serialized.
+
+    Returns:
+        CSV text with a header row and one row per student, suitable for download.
     """
     headers = set(['name', 'email', 'student id', 'canvas id', 'session name',
                   'seat name', 'emailed', 'room id', 'seat id', 'public seat url'])
