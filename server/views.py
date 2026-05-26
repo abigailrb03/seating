@@ -23,12 +23,20 @@ from server.typings.enum import EmailTemplate
 from server.utils.date import to_ISO8601
 from server.utils.misc import set_to_str, str_set_to_set
 
+"""AI-generated docstring: Flask view functions for staff and student-facing pages.
+
+Registers routes on ``app`` for offerings, exams, rooms, students, assignment, email,
+and public seat lookup. Uses custom URL converters from ``server.controllers``.
+"""
+
 
 @app.route('/')
 def index():
-    """
+    """TA-written docstring:
     Path: /
     Home page, which is the login page.
+
+    AI-generated docstring: Render login or redirect authenticated users to offerings.
     """
     # if already logged in, redirect to offerings page
     if current_user and current_user.is_authenticated:
@@ -42,12 +50,14 @@ def index():
 @app.route('/offerings')
 @login_required
 def offerings():
-    from server.models import Offering
-    """
+    """TA-written docstring:
     Path: /offerings
     Home page, which needs to be logged in to access.
     After logging in, fetch and present a list of course offerings.
+
+    AI-generated docstring: List Canvas offerings split by staff, student, and import status.
     """
+    from server.models import Offering
     # Fetch all user course offerings from canvas
     user = canvas_client.get_user(current_user.canvas_id)
     staff_course_dics, student_course_dics, others, skipped = canvas_client.get_user_courses_categorized(
@@ -88,11 +98,13 @@ def offerings():
 @app.route('/offerings/new', methods=['GET', 'POST'])
 @login_required
 def add_offerings():
-    from server.models import Offering
-    """
+    """TA-written docstring:
     Path: /offerings/new
     Add new course offerings to the database.
+
+    AI-generated docstring: Import selected staff Canvas courses into the database.
     """
+    from server.models import Offering
     user = canvas_client.get_user(current_user.canvas_id)
     staff_course_dics, _, _, skipped = canvas_client.get_user_courses_categorized(user)
     staff_offerings = [canvas_client.api_course_to_model(o) for o in staff_course_dics]
@@ -129,9 +141,11 @@ def add_offerings():
 
 @app.route('/<offering:offering>/')
 def offering(offering):
-    """
+    """TA-written docstring:
     Path: /offerings/<canvas_id>
     Shows all exams created for a course offering.
+
+    AI-generated docstring: Shows all exams created for a course offering.
     """
     is_staff = str(offering.canvas_id) in current_user.staff_offerings
     all_exams = offering.exams
@@ -148,9 +162,11 @@ def offering(offering):
 
 @app.route('/<offering:offering>/delete/', methods=['GET', 'DELETE'])
 def delete_offering(offering):
-    """
+    """TA-written docstring:
     Path: /offerings/<canvas_id>/delete
     Deletes a course offering.
+
+    AI-generated docstring: Deletes a course offering.
     """
     # offering urls convertor only checks login but does not check staff status
     # we need to do it here
@@ -173,9 +189,11 @@ def delete_offering(offering):
 
 @app.route("/<offering:offering>/exams/new/", methods=["GET", "POST"])
 def new_exam(offering):
-    """
+    """TA-written docstring:
     Path: /offerings/<canvas_id>/exams/new
     Creates a new exam for a course offering.
+
+    AI-generated docstring: Creates a new exam for a course offering.
     """
     # offering urls convertor only checks login but does not check staff status
     # we need to do it here
@@ -203,9 +221,11 @@ def new_exam(offering):
 
 @app.route("/<exam:exam>/delete/", methods=["GET", "DELETE"])
 def delete_exam(exam):
-    """
+    """TA-written docstring:
     Path: /offerings/<canvas_id>/exams/<exam_name>/delete
     Deletes an exam for a course offering.
+
+    AI-generated docstring: Deletes an exam for a course offering.
     """
     try:
         db.session.delete(exam)
@@ -219,9 +239,11 @@ def delete_exam(exam):
 
 @app.route("/<exam:exam>/edit/", methods=["GET", "POST"])
 def edit_exam(exam):
-    """
+    """TA-written docstring:
     Path: /offerings/<canvas_id>/exams/<exam_name>/edit
     Edits an exam for a course offering.
+
+    AI-generated docstring: Edits an exam for a course offering.
     """
     form = EditExamForm()
     if request.method == 'GET':
@@ -252,9 +274,11 @@ def edit_exam(exam):
 
 @app.route("/<exam:exam>/toggle/", methods=["GET", "PATCH"])
 def toggle_exam(exam):
-    """
+    """TA-written docstring:
     Path: /offerings/<canvas_id>/exams/<exam_name>/toggle
     Toggles an exam for a course offering.
+
+    AI-generated docstring: Toggles an exam for a course offering.
     """
     if exam.is_active:
         exam.is_active = False
@@ -274,9 +298,11 @@ def toggle_exam(exam):
 
 @app.route('/<exam:exam>/')
 def exam(exam):
-    """
+    """TA-written docstring:
     Path: /offerings/<canvas_id>/exams/<exam_name>
     Front page for an exam, which essentially shows all rooms created for an exam.
+
+    AI-generated docstring: Front page for an exam, which essentially shows all rooms created for an exam.
     """
     return render_template('exam.html.j2', exam=exam)
 # endregion
@@ -286,8 +312,10 @@ def exam(exam):
 
 @app.route('/<exam:exam>/rooms/import/')
 def import_room(exam):
-    """
+    """TA-written docstring:
     Path: /offerings/<canvas_id>/exams/<exam_name>/rooms/import
+
+    AI-generated docstring: Show room import options (sheet, master sheet, CSV, manual).
     """
     new_form = RoomForm()
     choose_form = ChooseRoomForm(room_list=get_spreadsheet_tabs(app.config.get('MASTER_ROOM_SHEET_URL')))
@@ -300,8 +328,10 @@ def import_room(exam):
 
 @app.route('/<exam:exam>/rooms/import/from_custom_sheet/', methods=['GET', 'POST'])
 def import_room_from_custom_sheet(exam):
-    """
+    """TA-written docstring:
     Path: /offerings/<canvas_id>/exams/<exam_name>/rooms/import/new
+
+    AI-generated docstring: Preview or create a room from a custom Google Sheet.
     """
     new_form = RoomForm()
     choose_form = ChooseRoomForm()
@@ -332,8 +362,10 @@ def import_room_from_custom_sheet(exam):
 
 @app.route('/<exam:exam>/rooms/import/from_master_sheet/', methods=['GET', 'POST'])
 def import_room_from_master_sheet(exam):
-    """
+    """TA-written docstring:
     Path: /offerings/<canvas_id>/exams/<exam_name>/rooms/import/choose
+
+    AI-generated docstring: Import one or more rooms from the master room spreadsheet.
     """
     new_form = RoomForm()
     choose_form = ChooseRoomForm(room_list=get_spreadsheet_tabs(app.config.get('MASTER_ROOM_SHEET_URL')))
@@ -368,6 +400,8 @@ def import_room_from_master_sheet(exam):
 
 @app.route('/<exam:exam>/rooms/import/from_csv_upload/', methods=['GET', 'POST'])
 def import_room_from_csv_upload(exam):
+    """AI-generated docstring: Import a room from an uploaded CSV file.
+    """
     new_form = RoomForm()
     choose_form = ChooseRoomForm()
     upload_form = UploadRoomForm()
@@ -399,6 +433,8 @@ def import_room_from_csv_upload(exam):
 
 @app.route('/<exam:exam>/rooms/import/from_manual/', methods=['GET', 'POST'])
 def import_room_manually(exam):
+    """AI-generated docstring: Create a room with only manually entered movable seats.
+    """
     form = EditRoomForm()
     if request.method == 'GET':
         if not form.movable_seats.entries:
@@ -431,9 +467,11 @@ def import_room_manually(exam):
 
 @app.route('/<exam:exam>/rooms/<int:id>/delete', methods=['GET', 'DELETE'])
 def delete_room(exam, id):
-    """
+    """TA-written docstring:
     Path: /offerings/<canvas_id>/exams/<exam_name>/rooms/<room_name>/delete
     Deletes a room for an exam.
+
+    AI-generated docstring: Deletes a room for an exam.
     """
     room = Room.query.filter_by(exam_id=exam.id, id=id).first_or_404()
     if room:
@@ -449,9 +487,11 @@ def delete_room(exam, id):
 
 @app.route('/<exam:exam>/rooms/<int:id>/edit', methods=['GET', 'POST'])
 def edit_room(exam, id):
-    """
+    """TA-written docstring:
     Path: /offerings/<canvas_id>/exams/<exam_name>/rooms/<room_name>/edit
     Edits a room for an exam.
+
+    AI-generated docstring: Edits a room for an exam.
     """
     room = Room.query.filter_by(exam_id=exam.id, id=id).first_or_404()
     form = EditRoomForm()
@@ -500,9 +540,11 @@ def edit_room(exam, id):
 
 @app.route('/<exam:exam>/rooms/<int:id>/')
 def room(exam, id):
-    """
+    """TA-written docstring:
     Path: /offerings/<canvas_id>/exams/<exam_name>/rooms/<room_name>
     Displays the room diagram, with an optional seat highlighted.
+
+    AI-generated docstring: Displays the room diagram, with an optional seat highlighted.
     """
     # fetch all seat assignment at this point too to avoid N+1 problem
     # we will need to display the seat assignment in the room diagram
@@ -519,6 +561,8 @@ def room(exam, id):
 
 @app.route('/<exam:exam>/students/import/')
 def import_students(exam):
+    """AI-generated docstring: Show student import options (sheet, Canvas, CSV, manual).
+    """
     from_sheet_form = ImportStudentFromSheetForm()
     from_canvas_form = ImportStudentFromCanvasRosterForm()
     from_csv_form = ImportStudentFromCsvUploadForm()
@@ -532,6 +576,8 @@ def import_students(exam):
 
 @app.route('/<exam:exam>/students/import/from_custom_sheet/', methods=['GET', 'POST'])
 def import_students_from_custom_sheet(exam):
+    """AI-generated docstring: Import students from a Google Sheet URL.
+    """
     from_sheet_form = ImportStudentFromSheetForm()
     from_canvas_form = ImportStudentFromCanvasRosterForm()
     from_csv_form = ImportStudentFromCsvUploadForm()
@@ -571,6 +617,8 @@ def import_students_from_custom_sheet(exam):
 
 @app.route('/<exam:exam>/students/import/from_canvas_roster/', methods=['GET', 'POST'])
 def import_students_from_canvas_roster(exam):
+    """AI-generated docstring: Import students from the Canvas roster API.
+    """
     from_sheet_form = ImportStudentFromSheetForm()
     from_canvas_form = ImportStudentFromCanvasRosterForm()
     from_csv_form = ImportStudentFromCsvUploadForm()
@@ -610,6 +658,8 @@ def import_students_from_canvas_roster(exam):
 
 @app.route('/<exam:exam>/students/import/from_csv_upload/', methods=['GET', 'POST'])
 def import_students_from_csv_upload(exam):
+    """AI-generated docstring: Import students from an uploaded CSV file.
+    """
     from_sheet_form = ImportStudentFromSheetForm()
     from_canvas_form = ImportStudentFromCanvasRosterForm()
     from_csv_form = ImportStudentFromCsvUploadForm()
@@ -652,6 +702,8 @@ def import_students_from_csv_upload(exam):
 
 @app.route('/<exam:exam>/students/import/from_manual_input/', methods=['GET', 'POST'])
 def import_students_from_manual_input(exam):
+    """AI-generated docstring: Import students from pasted CSV text.
+    """
     from_sheet_form = ImportStudentFromSheetForm()
     from_canvas_form = ImportStudentFromCanvasRosterForm()
     from_csv_form = ImportStudentFromCsvUploadForm()
@@ -691,6 +743,8 @@ def import_students_from_manual_input(exam):
 
 @app.route('/<exam:exam>/students/delete/', methods=['GET', 'POST'])
 def delete_students(exam):
+    """AI-generated docstring: Delete students by email list or all students in the exam.
+    """
     form = DeleteStudentForm()
     deleted, did_not_exist = set(), set()
     if form.validate_on_submit():
@@ -714,12 +768,15 @@ def delete_students(exam):
 
 @app.route('/<exam:exam>/students/')
 def students(exam):
+    """AI-generated docstring: List all students and assignments for an exam.
+    """
     # TODO load assignment and seat at the same time?
     return render_template('students.html.j2', exam=exam, students=exam.students)
 
 
 @app.route('/<exam:exam>/students/export/csv')
 def export_students_as_csv(exam):
+    """AI-generated docstring: Download exam roster and preferences as a CSV file."""
     from datetime import datetime
     file_content = export_exam_student_info(exam)
     timestamp = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
@@ -733,6 +790,8 @@ def export_students_as_csv(exam):
 
 @app.route('/<exam_student:exam_student>/edit', methods=['GET', 'POST'])
 def edit_student(exam_student):
+    """AI-generated docstring: Edit one student preferences, email, and clear invalid assignments.
+    """
     exam, student = exam_student
     form = EditStudentForm(room_list=exam.rooms)
     edited, did_not_exist = set(), set()
@@ -785,6 +844,8 @@ def edit_student(exam_student):
 
 @app.route('/<exam:exam>/students/edit', methods=['GET', 'POST'])
 def edit_students(exam):
+    """AI-generated docstring: Bulk-edit preferences for selected or all students.
+    """
     form = EditStudentsForm(room_list=exam.rooms)
     edited, did_not_exist = set(), set()
     if form.validate_on_submit():
@@ -842,6 +903,8 @@ def edit_students(exam):
 
 @app.route('/<exam_student:exam_student>/delete', methods=['GET', 'DELETE'])
 def delete_student(exam_student):
+    """AI-generated docstring: Delete a single student from an exam.
+    """
     exam, student = exam_student
     if student:
         try:
@@ -857,6 +920,8 @@ def delete_student(exam_student):
 
 @app.route('/<exam:exam>/students/assign/', methods=['GET', 'POST'])
 def assign(exam):
+    """AI-generated docstring: Bulk-assign, clear, or reassign all seat assignments.
+    """
     form = AssignForm()
     if form.validate_on_submit():
         def delete_all_assignments_no_sync(e):
@@ -882,6 +947,8 @@ def assign(exam):
 
 @app.route('/<exam_student:exam_student>/assign/', methods=['GET', 'POST'])
 def assign_student(exam_student):
+    """AI-generated docstring: Assign, override, or remove one student seat.
+    """
     form = AssignSingleForm()
     exam, student = exam_student
     if form.validate_on_submit():
@@ -912,6 +979,8 @@ def assign_student(exam_student):
 
 @app.route('/<exam:exam>/students/email/', methods=['GET', 'POST'])
 def email_all_students(exam):
+    """AI-generated docstring: Send assignment emails to many students at once.
+    """
     form = EmailForm()
     if form.validate_on_submit():
         successful_emails, failed_emails = email_about_assignment(exam, form, form.to_addr.data)
@@ -932,6 +1001,8 @@ def email_all_students(exam):
 
 @app.route('/<exam:exam>/students/email/<string:student_id>/', methods=['GET', 'POST'])
 def email_single_student(exam, student_id):
+    """AI-generated docstring: Send an assignment email to one student.
+    """
     form = EmailForm()
     if form.validate_on_submit():
         successful_emails, failed_emails = email_about_assignment(exam, form, form.to_addr.data)
@@ -956,12 +1027,16 @@ def email_single_student(exam, student_id):
 
 @app.route('/<exam_student:exam_student>', methods=['GET'])
 def student(exam_student):
+    """AI-generated docstring: Show a student profile page for staff.
+    """
     exam, student = exam_student
     return render_template('student.html.j2', exam=exam, student=student)
 
 
 @app.route('/<exam_student:exam_student>/photo/', methods=['GET'])
 def student_photo(exam_student):
+    """AI-generated docstring: Return Cal1Card photo bytes or a placeholder image.
+    """
     _, student = exam_student
     sid = student.sid
     if sid:
@@ -984,16 +1059,22 @@ def student_photo(exam_student):
 
 @app.context_processor
 def inject_env_vars():
+    """AI-generated docstring: Inject wiki URL into all Jinja templates.
+    """
     return dict(wiki_base_url=app.config.get('WIKI_BASE_URL'))
 
 
 @app.route('/favicon.ico')
 def favicon():
+    """AI-generated docstring: Serve the site favicon.
+    """
     return send_file('static/img/favicon.ico')
 
 
 @app.route('/students-template.png')
 def students_template():
+    """AI-generated docstring: Serve the student import template PNG.
+    """
     return send_file('static/img/students-template.png')
 # endregion
 
@@ -1002,6 +1083,8 @@ def students_template():
 
 @app.route('/seats/<int:seat_id>/')
 def student_single_seat(seat_id):
+    """AI-generated docstring: Public page showing one assigned seat for a student.
+    """
     seat = Seat.query.filter_by(id=seat_id).first_or_404()
     return render_template('seat.html.j2', room=seat.room, seat=seat)
 # endregion
