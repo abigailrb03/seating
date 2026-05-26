@@ -1,3 +1,10 @@
+"""AI-generated docstring: Canvas API helpers with optional mock mode for local development.
+
+Selects ``FakeCanvas`` or the real ``canvasapi`` client based on ``MOCK_CANVAS``,
+fetches users and courses, categorizes enrollments for staff vs student views, and
+builds roster rows for student import.
+"""
+
 from flask import session, request, url_for
 from canvasapi import Canvas
 from canvasapi.user import User
@@ -10,11 +17,23 @@ from server.typings.exception import Redirect
 
 
 def is_mock_canvas() -> bool:
+    """AI-generated docstring: Return True when fake Canvas data should be used."""
     return app.config['MOCK_CANVAS'] and \
         app.config['FLASK_ENV'].lower() != 'production'
 
 
 def _get_client(key=None) -> FakeCanvas | Canvas:
+    """AI-generated docstring: Return a Canvas or fake client for the current session.
+
+    Args:
+        key: OAuth access token; defaults to ``session['access_token']``.
+
+    Returns:
+        ``FakeCanvas`` in mock mode, otherwise a ``canvasapi.Canvas`` instance.
+
+    Raises:
+        Redirect: When not in mock mode and no access token is in the session.
+    """
     if is_mock_canvas():
         return FakeCanvas()
     if not key:
@@ -26,18 +45,22 @@ def _get_client(key=None) -> FakeCanvas | Canvas:
 
 
 def get_user(canvas_id, key=None) -> FakeUser | User:
+    """AI-generated docstring: Fetch a Canvas user by id through the active client."""
     return _get_client(key).get_user(canvas_id)
 
 
 def get_course(canvas_id, key=None) -> FakeCourse | Course:
+    """AI-generated docstring: Fetch a Canvas course by id through the active client."""
     return _get_client(key).get_course(canvas_id)
 
 
 def is_staff_enrollment(enrollment_type: str):
+    """AI-generated docstring: Return True when enrollment type is TA or teacher."""
     return enrollment_type.lower() in ('ta', 'teacher')
 
 
 def is_course_valid(c) -> bool:
+    """AI-generated docstring: Return True when a course has id, name, and course_code."""
     # A valid course has a name, id and course code
     # TODO: TBD if we should filter on published
     return not (not c) and \
@@ -47,6 +70,17 @@ def is_course_valid(c) -> bool:
 
 
 def normalize_course_start_date(course: FakeCourse | Course) -> None:
+    """AI-generated docstring: Ensure ``start_at`` and ``start_at_date`` are set on a course.
+
+    Prefers term start dates when present; otherwise falls back to course or
+    ``created_at`` fields so sorting and display have a consistent date.
+
+    Args:
+        course: Canvas or fake course object mutated in place.
+
+    Returns:
+        True when ``course.start_at`` is non-null after normalization.
+    """
     # Ensure a valid start_at date for a course.
     # return the term start_at_date if present
     # created_at is assumed to be at least always present
@@ -66,6 +100,17 @@ def normalize_course_start_date(course: FakeCourse | Course) -> None:
 
 def get_user_courses_categorized(user: FakeUser | User) \
         -> tuple[list[FakeCourse | Course], list[FakeCourse | Course], list[FakeCourse | Course]]:
+    """AI-generated docstring: Split a user's active courses into staff, student, and other lists.
+
+    Skips invalid courses, normalizes start dates, deduplicates categories (staff wins
+    over student), and sorts each list by ``start_at_date`` descending then name ascending.
+
+    Args:
+        user: Canvas or fake user whose enrollments are fetched.
+
+    Returns:
+        Tuple ``(staff_courses, student_courses, other_courses, skipped_courses)`` as lists.
+    """
     courses_raw = user.get_courses(enrollment_status='active', include=['term'], per_page=100)
     # TODO: Refactor to a dict { staff:, student:, other: }
     staff_courses, student_courses, other, skipped = set(), set(), set(), set()
@@ -106,6 +151,16 @@ def get_user_courses_categorized(user: FakeUser | User) \
 
 
 def get_student_roster_for_offering(offering_canvas_id, key=None):
+    """AI-generated docstring: Build import-ready roster rows from a Canvas course.
+
+    Args:
+        offering_canvas_id: Canvas course id for the offering.
+        key: Optional OAuth token; uses session token when omitted.
+
+    Returns:
+        Tuple ``(headers, rows)`` where ``headers`` is a fixed column list and each row
+        is a dict with canvas id, email, name, and student id when available.
+    """
     course = _get_client(key).get_course(offering_canvas_id)
     students = course.get_users(enrollment_type='student')
     headers = ['canvas id', 'email', 'name', 'student id']
@@ -125,6 +180,7 @@ def get_student_roster_for_offering(offering_canvas_id, key=None):
 
 
 def api_course_to_model(course: Course | FakeCourse) -> Offering:
+    """AI-generated docstring: Map a Canvas course object to an unsaved ``Offering`` model."""
     return Offering(
         canvas_id=str(course.id),
         name=course.name,

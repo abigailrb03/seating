@@ -1,3 +1,9 @@
+"""AI-generated docstring: Send seat-assignment emails to students via SMTP.
+
+Builds per-student subject and body from form templates, sends through the configured
+SMTP server, and marks successful recipients' assignments as emailed in the database.
+"""
+
 import os
 from server import app
 from server.models import db
@@ -16,6 +22,19 @@ _email_config = SMTPConfig(
 
 
 def substitute_about_assignment(exam, form, student):
+    """AI-generated docstring: Fill email subject and body templates for one student's seat.
+
+    Substitutes placeholders such as ``NAME``, ``ROOM``, ``SEAT``, and ``URL`` using the
+    student's assignment. Returns ``None`` when the student has no assignment.
+
+    Args:
+        exam: Exam whose display name appears in the subject line.
+        form: WTForms object with ``subject``, ``body``, and optional HTML body fields.
+        student: ``Student`` with an assignment, or ``None``.
+
+    Returns:
+        Tuple ``(subject, body)`` as strings, or ``(None, None)`` when there is no assignment.
+    """
     if not student or not student.assignment:
         return None, None
     assignment = student.assignment
@@ -37,6 +56,19 @@ def substitute_about_assignment(exam, form, student):
 
 
 def email_about_assignment(exam, form, to_addrs):
+    """AI-generated docstring: Send assignment emails to a list of addresses and update the DB.
+
+    Parses comma-separated addresses when given as a string, skips students without valid
+    templates, sends via SMTP, and sets ``assignment.emailed`` to True for successes.
+
+    Args:
+        exam: Exam whose students are matched by email address.
+        form: Email form with from, subject, body, cc, bcc, and HTML options.
+        to_addrs: Single address string, comma-separated string, or iterable of addresses.
+
+    Returns:
+        Tuple ``(success_addrs, failure_addrs)`` as sets of email strings.
+    """
     if isinstance(to_addrs, str):
         to_addrs = to_addrs.strip().split(',')
     if not to_addrs:

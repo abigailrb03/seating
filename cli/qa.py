@@ -1,3 +1,9 @@
+"""AI-generated docstring: Flask CLI commands for tests, linting, and dependency audits.
+
+Loaded only when ``FLASK_ENV`` is ``development`` or ``testing`` (see ``cli/__init__.py``).
+Commands shell out to ``pytest``, ``flake8``, ``pip-audit``, and related tools.
+"""
+
 import click
 import os
 
@@ -6,6 +12,10 @@ from server import app
 
 @app.cli.command('test')
 def run_all():
+    """AI-generated docstring: Run unit, e2e, and a11y tests with coverage reports.
+
+    Invokes ``pytest tests`` and writes JUnit XML plus HTML coverage under ``reports/``.
+    """
     click.echo('Running all tests...')
     os.system("""pytest tests --cov=server --cov-report=term-missing --junitxml=reports/pytest.xml --cov-report=term-missing:skip-covered --cov-report=html:reports/coverage --cov-config=tests/.coveragerc""")  # noqa: E501
     # the above uses command line to run tests (instead of pytest module) so python import lines are counted as covered
@@ -17,12 +27,14 @@ def run_all():
 
 @app.cli.command('unit')
 def run_unit():
+    """AI-generated docstring: Run ``tests/unit`` with coverage and JUnit output."""
     click.echo('Running unit tests...')
     os.system("""pytest tests/unit --cov=server --cov-report=term-missing --junitxml=reports/pytest-unit.xml --cov-report=term-missing:skip-covered --cov-report=html:reports/coverage-unit --cov-config=tests/.coveragerc""")  # noqa: E501
 
 
 @app.cli.command('e2e')
 def run_e2e():
+    """AI-generated docstring: Run ``tests/e2e`` with coverage and JUnit output."""
     click.echo('Running end-to-end tests...')
 
     os.system("""pytest tests/e2e --cov=server --cov-report=term-missing --junitxml=reports/pytest-e2e.xml --cov-report=term-missing:skip-covered --cov-report=html:reports/coverage-e2e --cov-config=tests/.coveragerc""")  # noqa: E501
@@ -30,12 +42,14 @@ def run_e2e():
 
 @app.cli.command('a11y')
 def run_a11y():
+    """AI-generated docstring: Run ``tests/a11y`` with coverage and JUnit output."""
     click.echo('Running accessibility tests...')
     os.system("""pytest tests/a11y --cov=server --cov-report=term-missing --junitxml=reports/pytest-a11y.xml --cov-report=term-missing:skip-covered --cov-report=html:reports/coverage-a11y --cov-config=tests/.coveragerc""")  # noqa: E501
 
 
 @app.cli.command('audit')
 def run_audit():
+    """AI-generated docstring: Check dependencies with pip, pip-audit, and safety."""
     click.echo('Checking for broken dependencies...')
     os.system('pip check')
     click.echo('Checking for outdated dependencies...')
@@ -48,5 +62,6 @@ def run_audit():
 
 @app.cli.command('lint')
 def run_lint():
+    """AI-generated docstring: Run flake8 on ``server`` and ``tests``."""
     click.echo('Running flake8 linter...')
     os.system('flake8 server tests')

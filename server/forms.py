@@ -1,3 +1,8 @@
+"""AI-generated docstring: WTForms classes for staff workflows in the seating web UI.
+
+Covers offerings, exams, rooms, student import strategies, assignment, email, and dev login.
+"""
+
 import re
 
 from flask_wtf import FlaskForm
@@ -11,11 +16,13 @@ from server.typings.enum import AssignmentImportStrategy, NewRowImportStrategy, 
 
 
 class MultiCheckboxField(SelectMultipleField):
+    """AI-generated docstring: Multi-select field rendered as a list of checkboxes."""
     widget = widgets.ListWidget(prefix_label=False)
     option_widget = widgets.CheckboxInput()
 
 
 class ChooseCourseOfferingForm(FlaskForm):
+    """AI-generated docstring: Pick Canvas offerings to import into the seating database."""
     submit = SubmitField('import')
     offerings = MultiCheckboxField('select_offerings')
 
@@ -26,6 +33,7 @@ class ChooseCourseOfferingForm(FlaskForm):
 
 
 class ExamFormBase(FlaskForm):
+    """AI-generated docstring: Shared fields for creating or editing an exam."""
     display_name = StringField('display_name', [InputRequired()], render_kw={
                                "placeholder": "Midterm 1"})
     active = BooleanField('active', default=True)
@@ -34,6 +42,7 @@ class ExamFormBase(FlaskForm):
 
 
 class ExamForm(ExamFormBase):
+    """AI-generated docstring: Create a new exam with a URL-safe ``name`` slug."""
     name = StringField('name', [InputRequired()], render_kw={"placeholder": "midterm1"})
     submit = SubmitField('create')
 
@@ -44,15 +53,18 @@ class ExamForm(ExamFormBase):
 
 
 class EditExamForm(ExamFormBase):
+    """AI-generated docstring: Update an existing exam's display name and active flag."""
     submit = SubmitField('make edits')
 
 
 class RoomFormBase(FlaskForm):
+    """AI-generated docstring: Shared optional start time and duration for a room."""
     start_at = DateTimeField('start_at', [Optional()], format='%Y-%m-%dT%H:%M')
     duration_minutes = IntegerField('duration_minutes', [Optional()])
 
 
 class RoomForm(RoomFormBase):
+    """AI-generated docstring: Import a new room from a custom Google Sheet URL and range."""
     display_name = StringField('display_name', [InputRequired()])
     sheet_url = StringField('sheet_url', [URL(), InputRequired()])
     sheet_range = StringField('sheet_range', [InputRequired()])
@@ -61,6 +73,7 @@ class RoomForm(RoomFormBase):
 
 
 class ChooseRoomForm(RoomFormBase):
+    """AI-generated docstring: Import one or more rooms from tabs on the master room sheet."""
     submit = SubmitField('import')
     rooms = MultiCheckboxField('select_rooms')
 
@@ -71,6 +84,7 @@ class ChooseRoomForm(RoomFormBase):
 
 
 class UploadRoomForm(RoomFormBase):
+    """AI-generated docstring: Upload a CSV file to create a room and its seats."""
     submit = SubmitField('upload')
     file = FileField('Choose File', validators=[
         FileRequired(),
@@ -80,11 +94,13 @@ class UploadRoomForm(RoomFormBase):
 
 
 class MovableSeatSubForm(NoCsrfForm):
+    """AI-generated docstring: One row of movable-seat attributes and a count (no CSRF)."""
     attributes = StringField('attributes', default='', render_kw={"placeholder": "Righty, Aisle"})
     count = IntegerField('count', [InputRequired()], default=1, render_kw={"placeholder": "1"})
 
 
 class EditRoomForm(RoomFormBase):
+    """AI-generated docstring: Edit room metadata and movable seat counts by attribute set."""
     display_name = StringField('display_name', [InputRequired()])
     movable_seats = FieldList(FormField(MovableSeatSubForm), min_entries=0)
     submit = SubmitField('make edits')
@@ -92,6 +108,7 @@ class EditRoomForm(RoomFormBase):
 
 
 class ImportStudentFormBase(FlaskForm):
+    """AI-generated docstring: Import strategy options shared by all student import forms."""
     revalidate_existing_assignments = BooleanField('revalidate_existing_assignments', default=True)
     assignment_import_strategy = SelectField('assignment_import_strategy', choices=[
         (e.value, e.name) for e in AssignmentImportStrategy],
@@ -117,15 +134,18 @@ class ImportStudentFormBase(FlaskForm):
 
 
 class ImportStudentFromSheetForm(ImportStudentFormBase):
+    """AI-generated docstring: Import students from a Google Sheet URL and tab range."""
     sheet_url = StringField('sheet_url', [URL()])
     sheet_range = StringField('sheet_range', [InputRequired()])
 
 
 class ImportStudentFromCanvasRosterForm(ImportStudentFormBase):
+    """AI-generated docstring: Import students from the Canvas roster API for the offering."""
     pass
 
 
 class ImportStudentFromCsvUploadForm(ImportStudentFormBase):
+    """AI-generated docstring: Import students from an uploaded CSV file."""
     file = FileField('Choose File', validators=[
         FileRequired(),
         FileAllowed(['csv'], 'CSV files only!')
@@ -133,11 +153,13 @@ class ImportStudentFromCsvUploadForm(ImportStudentFormBase):
 
 
 class ImportStudentFromManualInputForm(ImportStudentFormBase):
+    """AI-generated docstring: Import students from pasted CSV text in a textarea."""
     text = TextAreaField('text', [InputRequired()], render_kw={
                          "placeholder": "canvas id,email,name\n123456,x@y.z,John\n..."})
 
 
 class EditStudentsFormBase(FlaskForm):
+    """AI-generated docstring: Bulk or single-student preference fields (wants, avoids, rooms)."""
     wants = StringField('wants')
     avoids = StringField('avoids')
     room_wants = MultiCheckboxField('room_wants')
@@ -153,6 +175,7 @@ class EditStudentsFormBase(FlaskForm):
 
 
 class EditStudentForm(EditStudentsFormBase):
+    """AI-generated docstring: Edit one student's email and seat/room preferences."""
     new_email = StringField('email', [Email()])
 
     def __init__(self, room_list=None, *args, **kwargs):
@@ -160,6 +183,7 @@ class EditStudentForm(EditStudentsFormBase):
 
 
 class EditStudentsForm(EditStudentsFormBase):
+    """AI-generated docstring: Apply preference changes to many students selected by email."""
     emails = TextAreaField('emails')
     use_all_emails = BooleanField('use_all_emails')
 
@@ -168,18 +192,21 @@ class EditStudentsForm(EditStudentsFormBase):
 
 
 class DeleteStudentForm(FlaskForm):
+    """AI-generated docstring: Delete students from an exam by email list or all at once."""
     emails = TextAreaField('emails')
     use_all_emails = BooleanField('use_all_emails')
     submit = SubmitField('delete by emails')
 
 
 class AssignForm(FlaskForm):
+    """AI-generated docstring: Bulk assign, delete all assignments, or reassign an exam."""
     submit = SubmitField('assign')
     delete_all = SubmitField('delete all assignments')
     reassign_all = SubmitField('reassign all assignments')
 
 
 class AssignSingleForm(FlaskForm):
+    """AI-generated docstring: Assign or remove one student's seat, with optional overrides."""
     ignore_restrictions = BooleanField('ignore restrictions')
     seat_id = StringField('seat_id')
     just_delete = SubmitField('just delete')
@@ -187,6 +214,7 @@ class AssignSingleForm(FlaskForm):
 
 
 class EmailForm(FlaskForm):
+    """AI-generated docstring: Compose and send assignment notification emails."""
     from_addr = StringField('from_addr', [Email(), InputRequired()])
     to_addr = StringField('to_addr', [InputRequired()])
     cc_addr = StringField('cc_addr', [])
@@ -198,5 +226,6 @@ class EmailForm(FlaskForm):
 
 
 class DevLoginForm(FlaskForm):
+    """AI-generated docstring: Pick a mock Canvas user id when ``MOCK_CANVAS`` is enabled."""
     user_id = StringField('user_id', [InputRequired()], render_kw={"placeholder": "123456"})
     submit = SubmitField('login')

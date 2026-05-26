@@ -1,3 +1,10 @@
+"""AI-generated docstring: Flask-Login and Canvas OAuth wiring for the seating app.
+
+Configures ``login_manager`` and ``oauth_provider`` for real Canvas or mock dev OAuth
+(when ``MOCK_CANVAS`` is true). Registers token and user session callbacks used on
+every authenticated request.
+"""
+
 from flask import redirect, request, session, url_for
 
 import server.services.canvas as canvas_client
@@ -48,16 +55,33 @@ else:
 
 @oauth_provider.tokengetter
 def get_access_token(token=None):
+    """AI-generated docstring: Return the Canvas access token stored in the Flask session."""
     return session.get('access_token')
 
 
 @login_manager.user_loader
 def load_user(user_id):
+    """AI-generated docstring: Load a ``User`` row by primary key for Flask-Login.
+
+    Args:
+        user_id: String user id from the session cookie.
+
+    Returns:
+        ``User`` model instance, or ``None`` if the id is invalid.
+    """
     from server.models import User
     return User.query.get(user_id)
 
 
 @login_manager.unauthorized_handler
 def unauthorized():
+    """AI-generated docstring: Redirect anonymous users to login and save the target URL.
+
+    Stores ``request.url`` in ``session['after_login']`` so OAuth can return the user
+    to the page they originally requested.
+
+    Returns:
+        werkzeug Response redirecting to ``auth.login``.
+    """
     session['after_login'] = request.url
     return redirect(url_for('auth.login'))

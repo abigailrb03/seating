@@ -1,3 +1,9 @@
+"""AI-generated docstring: Flask application factory and startup wiring for the seating app.
+
+Creates the ``app`` instance, loads config from ``FLASK_ENV``, registers URL converters,
+blueprints, CLI commands, Sentry, and side-effect imports for auth, cache, and routes.
+"""
+
 from flask import Flask, redirect
 import logging
 import flask.ctx
@@ -9,10 +15,14 @@ from server.typings.exception import EnvironmentalVariableMissingError
 
 
 class UrlRequestContext(flask.ctx.RequestContext):
+    """AI-generated docstring: Request context that matches URLs without dispatching a view."""
+
     def match_request(self):
+        """AI-generated docstring: Skip default view matching (used for URL generation only)."""
         pass
 
     def push(self):
+        """AI-generated docstring: Match the URL rule and store ``view_args`` on the request."""
         super().push()
         try:
             url_rule, self.request.view_args = \
@@ -23,7 +33,10 @@ class UrlRequestContext(flask.ctx.RequestContext):
 
 
 class App(Flask):
+    """AI-generated docstring: Flask subclass that uses ``UrlRequestContext`` for ``url_for``."""
+
     def request_context(self, environ):
+        """AI-generated docstring: Build a ``UrlRequestContext`` instead of the default context."""
         return UrlRequestContext(self, environ)
 
 
@@ -69,8 +82,16 @@ else:
 
 @app.errorhandler(InvalidAccessToken)
 def handle_invalid_access_token(e):
-    """
+    """TA-written docstring:
     Redirects to login page if the Canvas access token is invalid or expired.
+
+    AI-generated docstring: Send the user back to login when Canvas rejects the token.
+
+    Args:
+        e: ``InvalidAccessToken`` from the Canvas API client.
+
+    Returns:
+        werkzeug Response redirecting to ``/login``.
     """
     return redirect('/login')
 
